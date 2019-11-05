@@ -1,0 +1,41 @@
+{
+  "words": {
+    "most_recent": "Piu recente",
+    "most_viewed": "I più visti",
+    "most_liked": "Most Liked",
+    "login": "I più apprezzati",
+    "refresh": "ricaricare",
+    "not_register_yet": "Non sei ancora registrato?",
+    "click_here": "Clicca qui",
+    "phone_number": "numero di telefono",
+    "phone_number_error": "numero di telefono errore",
+    "login_success": "successo di accesso",
+    "please_login": "Accedete, per favore",
+    "vip_be_overdue": "VIP essere in ritardo",
+    "more": "Di Più",
+    "home": "Casa",
+    "cancelsub": "Para cancelar a assinatura de SUCESSO",
+    "age18": "Ha 18 anni?",
+    "go4": "Se iscriversi o meno",
+    "continue": "Continua",
+    "notice": "Avviso",
+    "sure": "sicuro",
+    "cancel": "Annulla",
+    "terms": "condizioni",
+    "categories": "categorie",
+    "search": "ricerca",
+    "unlogin": "Exit logon",
+    "unlogin_success": "Exit logon success",
+    "change_password": "change password",
+    "password": "密碼",
+    "confirm_password": "confirm password",
+    "input_password": "input password",
+    "next_step": "next",
+    "password_not_equally": "Different ciphers",
+    "not_123456": "The password is too simple.",
+    "username_or_password_error": "username or password_error",
+    "changepassword_error":"change password error"
+
+
+  }
+}

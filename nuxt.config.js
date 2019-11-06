@@ -7,9 +7,7 @@ module.exports = {
   */
  generate:{
   routes: [
-    '/',
-    '/home/videos/',
-
+    '/'
   ]
  },
  cache: {

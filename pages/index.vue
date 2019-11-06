@@ -6,16 +6,13 @@
 
 <script>
 import Vue from "vue";
-import "../util/glo_request";
-import "../util/filter";
-import "../util/msg";
+// import "../util/glo_request";
+// import "../util/filter";
+// import "../util/msg";
 import "../util/es62es5";
 import jquery from "jquery";
 Vue.prototype.$jquery = jquery;
-import init_token from "../util/init_token";
-init_token();
 export default {
-    mounted() {}
 };
 </script>
 

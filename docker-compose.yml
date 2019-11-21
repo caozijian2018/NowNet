@@ -1,8 +1,8 @@
 version: "3"
 services:
-  tracker-front:
+  nownet:
     image: 'caocaocao/web'
-    container_name: track_dev
+    container_name: nownet_web
     working_dir: /app/
     volumes:
       - "./dist:/app/dist"

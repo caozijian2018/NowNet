@@ -27,6 +27,8 @@
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
     "nuxt": "^1.0.0",
+    "particles.js": "^2.0.0",
+    "particlesjs": "^2.2.3",
     "vue-i18n": "^8.0.0",
     "vue-video-player": "^5.0.2"
   },
@@ -38,6 +40,7 @@
     "eslint-plugin-vue": "^4.0.0",
     "postcss-hexrgba": "^1.0.1",
     "postcss-nested": "^3.0.0",
-    "postcss-responsive-type": "^1.0.0"
+    "postcss-responsive-type": "^1.0.0",
+    "vue-particles": "^1.0.9"
   }
 }

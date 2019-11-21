@@ -22,10 +22,6 @@ export default {
 @import "../assets/css/current_theme";
 @import "../assets/css/current_app";
 
-body {
-    background: @gray_back;
-}
-
 .container {
     width: 100%;
 }

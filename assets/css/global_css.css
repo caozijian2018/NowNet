@@ -2,19 +2,41 @@ body {
   font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Gill Sans'
 }
 
+.indent20{
+  text-indent: 20px;
+}
 * {
   margin: 0;
   padding: 0;
 }
-
+.img_blue{
+  background: rgba(3, 81, 87, 1.0);
+}
+.img_green{
+  background: rgba(161, 214, 137, 1.0);
+}
+.font_size_35{
+  font-size: 25px;
+}
 .ddd {
   color: rgb(180, 180, 180);
+}
+.gray_1 {
+  color: rgb(100, 100, 100);
 }
 
 .gray {
   color: rgb(50, 50, 50);
 }
-
+.font_size_50{
+  font-size: 50px;
+}
+.font_size_60{
+  font-size: 60px;
+}
+.font_size_80{
+  font-size: 80px;
+}
 .nownet_button {
   /* display: inline-block; */
   background-color: #82b541;
@@ -97,6 +119,9 @@ html {
   padding-bottom: .5rem;
 }
 
+.padding_bottom_15 {
+  padding-bottom: 10px;
+}
 .padding_bottom_20 {
   padding-bottom: 2rem;
 }
@@ -458,6 +483,10 @@ html {
   overflow: scroll;
 }
 
+.overflow_x_scroll {
+  overflow-x: scroll;
+}
+
 .overflow_hidden {
   overflow: hidden
 }
@@ -480,6 +509,12 @@ html {
   position: fixed;
 }
 
+.transition4{
+  transition-duration: .4s;
+}
+.width_70{
+  width: 70%;
+}
 .pcs {
   position: absolute;
   left: 50%;
@@ -532,7 +567,10 @@ html {
 }
 
 .nscrol::-webkit-scrollbar {
-  display: none
+  display: none;
+  width: 0 !important;
+  -ms-overflow-style: none; 
+  overflow: -moz-scrollbars-none;
 }
 
 /* 大于800的样式 */
@@ -649,7 +687,15 @@ html {
   .pc_show {
     display: none;
   }
-
+  .phone_width_100{
+    width: 100%;
+  }
+  .phone_width_90{
+    width: 90%;
+  }
+  .phone_margin{
+    margin: auto;
+  }
   .phone_show {
     display: block;
   }
@@ -726,6 +772,10 @@ html {
 
 .line_height_25px {
   line-height: 22px;
+}
+
+.line_height_27px {
+  line-height: 27px;
 }
 
 .width_80_pc {

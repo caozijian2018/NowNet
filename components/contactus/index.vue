@@ -1,5 +1,5 @@
 <template>
-    <div class="height_100 phone_soft_box display_inline_block overflow_hidden">
+    <div class="height_100 contactus_soft_box display_inline_block overflow_hidden">
         <div
             class="display_inline_block left_squre height_100 position_relative"
             style="width: 900px"
@@ -74,14 +74,14 @@ export default {
     methods: {
         white_color_text_transform() {
             return (
-                "skew(24deg) translateX(" +
+                "skew(17deg) translateX(" +
                 (50 + this.translatePersent / 2) +
                 "%)"
             );
         },
         orange_color_text_transform() {
             return (
-                "skew(24deg) translateX(" +
+                "skew(17deg) translateX(" +
                 (this.translatePersent / 2 - 50) +
                 "%)"
             );
@@ -102,23 +102,23 @@ export default {
 </script>
 <style lang="less">
 @import "../../assets/css/current_theme";
-.phone_soft_box {
+.contactus_soft_box {
     .left_squre {
         background: @app_gray;
     }
     .top_text_left {
         transform-origin: right top;
-        transform: rotate(-20deg) translateX(50%);
+        transform: rotate(-17deg) translateX(50%);
     }
     .top_text_right {
         transform-origin: left top;
-        transform: rotate(-20deg) translateX(-50%);
+        transform: rotate(-17deg) translateX(-50%);
     }
     .top_text_right {
     }
     .rotate_triangle {
         transform-origin: center bottom;
-        transform: translateX(-50%) skew(-24deg);
+        transform: translateX(-50%) skew(-17deg);
     }
     .orange {
         color: @orange;

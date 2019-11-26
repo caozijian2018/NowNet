@@ -1,12 +1,12 @@
 <template>
     <div
-        class="height_100 overflow_hidden first_page display_inline_block"
-        :style="{width: $store.state.innerWidth + 'px'}"
+        class="height_100 overflow_hidden first_page display_inline_block phone_block"
+        :style="{width: $store.state.is_pc ? $store.state.innerWidth + 'px' :'100%'}"
     >
         <div
-            class="width_70 height_100 margin_auto flex_align_center flex_jusify_space display_flex"
+            class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex"
         >
-            <div class="width_30">
+            <div class="width_30 phone_width_100">
                 <h1 class="font_size_50 margin_bottom_15 transition4 transilateY1">Now Netmobi</h1>
                 <div class="font_size_8 gray_1 line_height_27px transition4 transilateY2">
                     We produce impressive
@@ -14,7 +14,7 @@
                     to use, explore, and love.
                 </div>
             </div>
-            <div class="width_50 right_logo_box position_relative overflow_hidden">
+            <div class="width_50 right_logo_box position_relative overflow_hidden phone_none">
                 <img
                     src="../../static/img/back2.jpg"
                     style="border-radius:200px"

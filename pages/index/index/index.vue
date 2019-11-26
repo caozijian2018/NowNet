@@ -1,28 +1,30 @@
 <template>
     <div
-        class="index_box height_100 overflow_x_scroll width_100 nscrol position_relative"
+        class="index_box height_100 overflow_x_scroll phone_flex phone_column width_100 nscrol position_relative"
         @scroll="scroll"
+        :style="{height: $store.state.is_pc ? '100%' : $store.state.innerHeight+'px'}"
     >
-        <div class="head_position width_50">
+        <div class="head_position width_50 phone_width_100 phone_relative">
             <img src="../../../static/img/logo.png" alt />
         </div>
         <div
-            class="height_100 max_width_box"
-            :style="{width: max_width+'px'}"
+            @scroll="scrollY"
+            class="height_100 phone_flex_1 phone_overflow_y_scroll phone_height_auto  max_width_box"
+            :style="{width: $store.state.is_pc ? max_width+'px' : ''}"
         >
-            <first-page ref="home_page" :class="{transition_back: most_scroll + (inner_width)> show_arr[0]}" :transfrom-style="first_page_transform_style()"></first-page>
-            <second-page ref="slogon"></second-page>
+            <first-page ref="home_page" :class="{transition_back:  most_scroll + (inner_width)> show_arr[0]}" :transfrom-style="first_page_transform_style()"></first-page>
+            <second-page ref="slogon" :class="{transition_back: isTransitionBack(1)}"></second-page>
             <third-page ref="third_path" :third-left-page-position="(scroll_left - $store.state.innerWidth) * .1"></third-page>
-            <fourth-page ref="fourth_path" :class="{transition_back: most_scroll + (inner_width)> show_arr[3]}"></fourth-page>
-            <fiveth-page ref="fiveth_path" :class="{transition_back: most_scroll + (inner_width-300)> show_arr[4]}"></fiveth-page>
-            <products ref="products" :class="{transition_back: most_scroll + (inner_width)> show_arr[5]}"></products>
+            <fourth-page ref="fourth_path" :class="{transition_back:isTransitionBack(3)}"></fourth-page>
+            <fiveth-page ref="fiveth_path" :class="{transition_back: isTransitionBack(4)}"></fiveth-page>
+            <products ref="products" :class="{transition_back: isTransitionBack(5)}"></products>
             <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: most_scroll > show_arr[6]}"></secret-garden>
-            <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: most_scroll > show_arr[7]}"></phone-soft-ware>
+            <!-- <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: most_scroll > show_arr[7]}"></phone-soft-ware>
             <why-choose-us  :translate-persent="why_choose_page_scroll()" :class="{transition_back: most_scroll > show_arr[8]}" ref="why_choose_us"></why-choose-us>
-            <contactus  :translate-persent="contact_page_scroll()" :class="{transition_back: most_scroll > show_arr[9]}" ref="contactus"></contactus>
+            <contactus  :translate-persent="contact_page_scroll()" :class="{transition_back: most_scroll > show_arr[9]}" ref="contactus"></contactus> -->
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
-        <div class="navigation_positoin width_45">
+        <div class="navigation_positoin width_50 phone_none" >
             <div class="display_flex flex_jusify_space">
                 <div
                     v-for="(item,index) in navigation_arr"
@@ -82,18 +84,24 @@ export default {
         this.init();
         this.$nextTick(() => {
             this.inner_width = this.$store.state.innerWidth / 2;
+            console.log(this.$store.state.innerWidth);
+            console.log(this.$store.state.innerHeight);
+
+            this.inner_height = this.$store.state.innerHeight / 2;
             this.sortModuleOffset();
-            
         });
     },
     methods: {
+        isTransitionBack(i){
+           return this.$store.state.is_pc ? (this.most_scroll + (this.inner_width)> this.show_arr[i]) : (this.most_scroll_y + (this.inner_height)> this.show_arr_scroll_y[i]);
+        },
         sortModuleOffset() {
             var width = 0;
             for(var i=0; i< document.querySelectorAll(".max_width_box > div").length; i++){
                 var dom = document.querySelectorAll(".max_width_box > div")[i]
-                width += parseInt(getComputedStyle(dom).width)
+                width += dom.offsetWidth
             }
-            this.max_width = width +10;
+            this.max_width = width + 3601;
             this.$nextTick(()=>{
             this.show_arr = [
                 0,
@@ -103,9 +111,22 @@ export default {
                 this.$refs.fiveth_path.$el.offsetLeft,
                 this.$refs.products.$el.offsetLeft,
                 this.$refs.secret.$el.offsetLeft,
-                this.$refs.soft_ware.$el.offsetLeft,
-                this.$refs.why_choose_us.$el.offsetLeft,
-                this.$refs.contactus.$el.offsetLeft
+                // this.$refs.soft_ware.$el.offsetLeft,
+                // this.$refs.why_choose_us.$el.offsetLeft,
+                // this.$refs.contactus.$el.offsetLeft
+
+            ];
+            this.show_arr_scroll_y = [
+                0,
+                this.$refs.slogon.$el.offsetTop,
+                this.$refs.third_path.$el.offsetTop,
+                this.$refs.fourth_path.$el.offsetTop,
+                this.$refs.fiveth_path.$el.offsetTop,
+                this.$refs.products.$el.offsetTop,
+                this.$refs.secret.$el.offsetTop,
+                // this.$refs.soft_ware.$el.offsetLeft,
+                // this.$refs.why_choose_us.$el.offsetLeft,
+                // this.$refs.contactus.$el.offsetLeft
 
             ];
             console.log(this.show_arr)
@@ -153,16 +174,30 @@ export default {
         },
         scroll(v) {
             var scroll_left = v.target.scrollLeft;
+            var scroll_top = v.target.scrollTop;
             this.scroll_left = scroll_left;
+            this.scroll_top = scroll_top;
             bus.$emit("scroll", scroll_left)
-            if(scroll_left > this.most_scroll){
-               this.most_scroll = scroll_left
+            bus.$emit("scrollY", scroll_top)
+            if(scroll_left > this.most_scroll) {
+               this.most_scroll = scroll_left;
             }
-            console.log(this.most_scroll)
+            if(scroll_top > this.most_scroll_y){
+                this.most_scroll_y = scroll_top;
+            }
             var deg =
                 (scroll_left > this.$store.state.innerWidth
                     ? this.$store.state.innerWidth * 0.7
                     : scroll_left) / 10;
+        },
+        scrollY(v){
+            var scroll_top = v.target.scrollTop;
+            this.scroll_top = scroll_top;
+            console.log(scroll_top)
+            bus.$emit("scrollY", scroll_top);
+            if(scroll_top > this.most_scroll_y){
+                this.most_scroll_y = scroll_top;
+            }
         },
         init() {
             this.setHeightAndPhoneOrPc();
@@ -182,15 +217,19 @@ export default {
     },
     data() {
         return {
+            most_scroll_y: 0,
             secret_position_x: 0,
             show_arr:[],
-            inner_width:0,
+            inner_width: 0,
+            inner_height: 0,
             most_scroll: 0,
             show_third_img: true,
             show_third_img_2: true,
             scroll_left: 0,
+            scroll_top: 0,
             preindex: 0,
             max_width: 0,
+            show_arr_scroll_y:[],
             navigation_arr: [
                 "Home",
                 "Slogon",
@@ -267,6 +306,22 @@ export default {
             height: 1px;
             background: @orange;
             bottom: 0;
+        }
+    }
+    @media screen and (max-width: 800px){
+        .head_position {
+            height: 60px;
+            padding: 0 10px;
+            line-height: 60px;
+            img {
+                width: 100px;
+                vertical-align: middle;
+            }
+            position: relative;
+            box-shadow: 3px 5px 9px #ddd;
+            top: 0px;
+            left: 0;
+            transform: translateX(0%);
         }
     }
 }

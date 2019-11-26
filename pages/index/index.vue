@@ -1,5 +1,5 @@
 <template>
-    <div class="container display_flex flex_column" :style="{height:height_}">
+    <div class="container display_flex flex_column" :style="{height:$store.state.innerHeight+'px'}">
         <!-- <video-head @showLogin="showLogin" class :class="{height0:is_scroll_bottom}"></video-head> -->
         <div
             v-loading.fullscreen.lock="fullscreenLoading"
@@ -42,8 +42,8 @@ export default {
             window.onresize = this.setHeightAndISPc;
         },
         setHeightAndISPc() {
-            this.height_ = innerHeight + "px";
-            this.$store.state.innerHeight = this.height_;
+            // this.height_ = innerHeight;
+            // this.$store.state.innerHeight = this.height_;
             this.pc_phone();
 
         }

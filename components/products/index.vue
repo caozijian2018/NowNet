@@ -5,14 +5,14 @@
         :style="{ width: $store.state.innerWidth + 'px' }"
     >
         <div
-            class="width_70 height_100 margin_auto flex_align_center flex_jusify_space display_flex"
+            class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
         >
-            <div class="width_30">
-                <h1 class="font_size_50 margin_bottom_15 fourth_page_h1">Ketchupbox</h1>
+            <div class="width_30 phone_width_90 phone_margin">
+                <h1 class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 phone phone_transilate_X2">Ketchupbox</h1>
             </div>
-            <div class="position_relative font_size_8 width_60 line_height_27px">
+            <div class="position_relative font_size_8 width_60 phone_margin phone_width_90 line_height_27px">
                 <div class="display_flex flex_jusify_space">
-                    <div class="width_100 transform_duration1 gray_1 transilate-Y2">
+                    <div class="width_100 gray_1 transform_duration1 phone phone_transilateX2">
                         <!-- <h1 class="margin_bottom_15">Digital Content</h1> -->
                         Ketchupbox is a premium subscription service. The service consists
                         of multiple categories of funny content, including funny videos,

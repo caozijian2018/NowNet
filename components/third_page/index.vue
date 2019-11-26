@@ -1,5 +1,5 @@
 <template>
-    <div
+    <div v-if="$store.state.is_pc"
         class="height_100 third_page white display_inline_block"
         :style="{transform: 'translateX('+ -(thirdLeftPagePosition + 200)+'px)' }"
     >
@@ -37,6 +37,11 @@
             </div>
         </div>
     </div>
+    <div v-else class="margin_top_70px phone_skew_box display_flex flex_center flex_align_center width_100 position_relative">
+        <div class="button white">
+            contact Us
+        </div>
+    </div>
 </template>
 
 <script>
@@ -56,10 +61,23 @@ export default {
 <style lang='less'>
     // 第三页
     @import "../../assets/css/current_theme";
+    .phone_skew_box{
+        transform:skew(0 , -12deg);
+        .button{
+            transform:skew(0 , 12deg);
+            border-radius: 4px;
+            padding: 10px 20px;
+            background: @orange;
+        }
+        height: 300px;
+        background-image: url('../../static/img/ice.jpeg');
+        background-position: 50% 50%;
+        background-size: 200%;
+    }
     .third_page {
         .rotate_triangle {
             transform-origin:left top;
-            transform: skew(-21deg);
+            transform: skew(-16deg);
         }
         background: @blue;
         .back_blue{

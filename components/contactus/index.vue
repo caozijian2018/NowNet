@@ -1,7 +1,7 @@
 <template>
     <div class="height_100 contactus_soft_box display_inline_block overflow_hidden">
         <div
-            class="display_inline_block left_squre height_100 position_relative"
+            class="display_inline_block left_squre height_100 position_relative phone_none"
             style="width: 900px"
         >
             <!-- <img src="../../static/img/triangle.png" class="height_100" alt /> -->
@@ -33,11 +33,11 @@
             :style="{ width: $store.state.innerWidth + 'px' }"
         >
             <div
-                class="width_70 height_100 margin_auto flex_align_center flex_jusify_space display_flex"
+                class="width_70 height_100 phone_width_90 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
             >
-                <div class="width_30">
+                <div class="width_30 phone_width_90 phone_margin">
                     <h1
-                        class="font_size_50 margin_bottom_15 fourth_page_h1 position_absolute transform_duration1 transilateX3"
+                        class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
                     >Contact Us</h1>
                 </div>
                 <div class="position_relative font_size_8 width_60 line_height_27px">

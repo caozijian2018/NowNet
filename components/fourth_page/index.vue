@@ -2,7 +2,7 @@
     <div
         class="height_100 overflow_hidden phone_margin_top_60px fourth_page display_inline_block"
         ref="fourth_path"
-        :style="{width: $store.state.innerWidth + 'px'}"
+        :style="{width: $store.state.innerWidth + 'px', height: $store.state.is_pc ? 'height':'auto'}"
     >
         <div
             class="width_70 height_100 phone_width_90 margin_auto flex_align_center flex_jusify_space display_flex phone_block"

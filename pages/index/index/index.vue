@@ -4,7 +4,7 @@
         @scroll="scroll"
         :style="{height: $store.state.is_pc ? '100%' : $store.state.innerHeight+'px'}"
     >
-        <div class="head_position width_50 phone_width_100 phone_relative">
+        <div class="head_position width_50 box_szing phone_width_100 phone_relative">
             <img src="../../../static/img/logo.png" alt />
         </div>
         <div
@@ -18,10 +18,10 @@
             <fourth-page ref="fourth_path" :class="{transition_back:isTransitionBack(3)}"></fourth-page>
             <fiveth-page ref="fiveth_path" :class="{transition_back: isTransitionBack(4)}"></fiveth-page>
             <products ref="products" :class="{transition_back: isTransitionBack(5)}"></products>
-            <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: most_scroll > show_arr[6]}"></secret-garden>
-            <!-- <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: most_scroll > show_arr[7]}"></phone-soft-ware>
-            <why-choose-us  :translate-persent="why_choose_page_scroll()" :class="{transition_back: most_scroll > show_arr[8]}" ref="why_choose_us"></why-choose-us>
-            <contactus  :translate-persent="contact_page_scroll()" :class="{transition_back: most_scroll > show_arr[9]}" ref="contactus"></contactus> -->
+            <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></secret-garden>
+            <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: isTransitionBack(7)}"></phone-soft-ware>
+            <why-choose-us  :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}" ref="why_choose_us"></why-choose-us>
+            <contactus  :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ref="contactus"></contactus>
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
         <div class="navigation_positoin width_50 phone_none" >
@@ -111,9 +111,9 @@ export default {
                 this.$refs.fiveth_path.$el.offsetLeft,
                 this.$refs.products.$el.offsetLeft,
                 this.$refs.secret.$el.offsetLeft,
-                // this.$refs.soft_ware.$el.offsetLeft,
-                // this.$refs.why_choose_us.$el.offsetLeft,
-                // this.$refs.contactus.$el.offsetLeft
+                this.$refs.soft_ware.$el.offsetLeft,
+                this.$refs.why_choose_us.$el.offsetLeft,
+                this.$refs.contactus.$el.offsetLeft
 
             ];
             this.show_arr_scroll_y = [
@@ -124,10 +124,9 @@ export default {
                 this.$refs.fiveth_path.$el.offsetTop,
                 this.$refs.products.$el.offsetTop,
                 this.$refs.secret.$el.offsetTop,
-                // this.$refs.soft_ware.$el.offsetLeft,
-                // this.$refs.why_choose_us.$el.offsetLeft,
-                // this.$refs.contactus.$el.offsetLeft
-
+                this.$refs.soft_ware.$el.offsetTop,
+                this.$refs.why_choose_us.$el.offsetTop,
+                this.$refs.contactus.$el.offsetTop
             ];
             console.log(this.show_arr)
             })

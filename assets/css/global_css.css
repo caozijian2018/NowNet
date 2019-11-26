@@ -894,6 +894,9 @@ html {
 
 
 @media screen and (max-width:800px) {
+  .phone_overflow_x_hidden{
+    overflow-x: hidden;
+  }
   .phone_transilate_X1 {
     transform: translateX(-100px);
   }

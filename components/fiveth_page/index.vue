@@ -2,7 +2,7 @@
     <div
         class="height_100 white overflow_hidden fiveth_box display_inline_block"
         ref="fourth_path"
-        :style="{width: $store.state.innerWidth + 'px'}"
+        :style="{width: $store.state.innerWidth + 'px', height: $store.state.is_pc ? 'height':'auto'}"
     >
         <div
             class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block" 

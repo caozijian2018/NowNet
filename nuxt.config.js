@@ -17,7 +17,7 @@ module.exports = {
 
  dev: (process.env.NODE_ENV !== 'production'),
  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3025',
+    baseUrl: process.env.BASE_URL || 'http://localhost:3027',
     API_URL: API_URL,
     WTAT_THIS_APP:"humorboom"
   },

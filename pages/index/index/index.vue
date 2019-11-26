@@ -12,7 +12,7 @@
             class="height_100 phone_flex_1 phone_overflow_y_scroll phone_height_auto  max_width_box"
             :style="{width: $store.state.is_pc ? max_width+'px' : ''}"
         >
-            <first-page ref="home_page" :class="{transition_back:  most_scroll + (inner_width)> show_arr[0]}" :transfrom-style="first_page_transform_style()"></first-page>
+            <first-page ref="home_page" :class="{transition_back:  most_scroll + (inner_width)> show_arr[0]}" :transform-style-back="first_page_back_transform_style()" :transfrom-style="first_page_transform_style()"></first-page>
             <second-page ref="slogon" :class="{transition_back: isTransitionBack(1)}"></second-page>
             <third-page ref="third_path" :third-left-page-position="(scroll_left - $store.state.innerWidth) * .1"></third-page>
             <fourth-page ref="fourth_path" :class="{transition_back:isTransitionBack(3)}"></fourth-page>
@@ -140,6 +140,13 @@ export default {
             return (
                 "rotate(" + rotate_constant / 20 + "deg) scale(" + rotate + ")"
             );
+        },
+        first_page_back_transform_style() {
+            var rotate_constant =
+                this.scroll_left > this.$store.state.innerWidth * 0.7
+                    ? this.$store.state.innerWidth * 0.7
+                    : this.scroll_left;
+            return rotate_constant
         },
         secret_page_scroll() {
             return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[6]))/this.$store.state.innerWidth*100

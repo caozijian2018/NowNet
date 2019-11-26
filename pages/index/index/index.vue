@@ -1,104 +1,207 @@
 <template>
-    <div class="index_box height_100 overflow_x_scroll width_100 nscrol position_relative" @scroll="scroll">
+    <div
+        class="index_box height_100 overflow_x_scroll width_100 nscrol position_relative"
+        @scroll="scroll"
+    >
         <div class="head_position width_50">
-            <img src="../../../static/img/logo.png" alt="">
+            <img src="../../../static/img/logo.png" alt />
         </div>
-        <div class="height_100" :style="{width: $store.state.innerWidth*navigation_arr.length+'px'}">
-            <!-- 首页 -->
-            <div class="height_100 overflow_hidden first_page display_inline_block" :style="{width: $store.state.innerWidth + 'px'}">
-                <div class="width_70 height_100 margin_auto flex_align_center flex_jusify_space display_flex">
-                    <div class="width_30">
-                        <h1 class="font_size_50 margin_bottom_15">
-                            Now Netmobi 
-                        </h1>
-                        <div class="font_size_8 gray_1 line_height_27px ">
-                            We produce impressive 
-                            online products for users
-                            to use, explore, and love.
-                        </div>
-                    </div>
-                    <div class="width_50 right_logo_box position_relative" :style="{transform: first_page_transform_style() }">
-                        <img src="../../../static/img/logo_left.png" class="width_100 vertical_middle" style="border: 0" alt="">
-                    </div>
-                </div>
-            </div>
+        <div
+            class="height_100 max_width_box"
+            :style="{width: max_width+'px'}"
+        >
+            <first-page ref="home_page" :class="{transition_back: most_scroll + (inner_width)> show_arr[0]}" :transfrom-style="first_page_transform_style()"></first-page>
+            <second-page ref="slogon"></second-page>
+            <third-page ref="third_path" :third-left-page-position="(scroll_left - $store.state.innerWidth) * .1"></third-page>
+            <fourth-page ref="fourth_path" :class="{transition_back: most_scroll + (inner_width)> show_arr[3]}"></fourth-page>
+            <fiveth-page ref="fiveth_path" :class="{transition_back: most_scroll + (inner_width-300)> show_arr[4]}"></fiveth-page>
+            <products ref="products" :class="{transition_back: most_scroll + (inner_width)> show_arr[5]}"></products>
+            <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: most_scroll > show_arr[6]}"></secret-garden>
+            <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: most_scroll > show_arr[7]}"></phone-soft-ware>
+            <why-choose-us  :translate-persent="why_choose_page_scroll()" :class="{transition_back: most_scroll > show_arr[8]}" ref="why_choose_us"></why-choose-us>
+            <contactus  :translate-persent="contact_page_scroll()" :class="{transition_back: most_scroll > show_arr[9]}" ref="contactus"></contactus>
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
         <div class="navigation_positoin width_45">
             <div class="display_flex flex_jusify_space">
-                <div v-for="(item,index) in navigation_arr" class="transition4 flex_1 navigation_arr_div padding_bottom_15 position_relative" :key="item" :class="{border_bottom_transparent: index == navigation_arr.length-1}">
-                    <div class="squre_point position_absolute transition4 animated " :class="{rubberBand: isScrolledThisItem(index), already_rolled: isScrolledThisItem(index)}"></div>
-                    <div class="transition4 text" @click="scrollPage(index)" :class="{orange_text: isScrolledThisItem(index)}">
-                        {{item}}
-                    </div>
+                <div
+                    v-for="(item,index) in navigation_arr"
+                    class="transition4 flex_1 navigation_arr_div padding_bottom_15 position_relative"
+                    :key="item"
+                    :class="{border_bottom_transparent: index == navigation_arr.length-1}"
+                >
+                    <div
+                        class="squre_point position_absolute transition4 animated"
+                        :class="{rubberBand: isScrolledThisItem(index), already_rolled: isScrolledThisItem(index)}"
+                    ></div>
+                    <div
+                        class="transition4 text gray_1"
+                        @click="scrollPage(index)"
+                        :class="{orange_text: isScrolledThisItem(index)}"
+                    >{{item}}</div>
                 </div>
             </div>
-            <div class="bottom_orange_border position_absolute" :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length)+'%'}">
-            </div>
+            <div
+                class="bottom_orange_border position_absolute"
+                :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length)+'%'}"
+            ></div>
         </div>
     </div>
 </template>
 
 <script>
 import pcOrPhone from "../../../util/get_pc_or_phone";
+import fourthPage from "../../../components/fourth_page";
+import thirdPage from "../../../components/third_page";
+import secondPage from "../../../components/second_page";
+import firstPage from "../../../components/first_page";
+import fivethPage from "../../../components/fiveth_page";
+import products from "../../../components/products";
+import secretGarden from "../../../components/secret_garden";
+import phoneSoftWare from "../../../components/phone_soft_ware";
+import whyChooseUs from "../../../components/why_choose_us";
+import contactus from "../../../components/contactus";
+
+
+import bus from "../../../util/bus"
+
 export default {
-    mounted(){
-        this.init()
+    components:{
+        thirdPage,
+        fourthPage,
+        secondPage,
+        firstPage,
+        fivethPage,
+        products,
+        secretGarden,
+        phoneSoftWare,
+        whyChooseUs,
+        contactus
     },
-    methods:{
-        first_page_transform_style(){
-            var rotate_constant = this.scroll_left > this.$store.state.innerWidth*0.7 ? this.$store.state.innerWidth * 0.7 : this.scroll_left;
-            var rotate = rotate_constant / 300 > 1 ? rotate_constant / 300 : 1;
-            console.log(rotate);
-            return 'rotate('+rotate_constant / 20+'deg) scale('+ rotate +')'
+    mounted() {
+        this.init();
+        this.$nextTick(() => {
+            this.inner_width = this.$store.state.innerWidth / 2;
+            this.sortModuleOffset();
+            
+        });
+    },
+    methods: {
+        sortModuleOffset() {
+            var width = 0;
+            for(var i=0; i< document.querySelectorAll(".max_width_box > div").length; i++){
+                var dom = document.querySelectorAll(".max_width_box > div")[i]
+                width += parseInt(getComputedStyle(dom).width)
+            }
+            this.max_width = width +10;
+            this.$nextTick(()=>{
+            this.show_arr = [
+                0,
+                this.$refs.slogon.$el.offsetLeft,
+                this.$refs.third_path.$el.offsetLeft,
+                this.$refs.fourth_path.$el.offsetLeft,
+                this.$refs.fiveth_path.$el.offsetLeft,
+                this.$refs.products.$el.offsetLeft,
+                this.$refs.secret.$el.offsetLeft,
+                this.$refs.soft_ware.$el.offsetLeft,
+                this.$refs.why_choose_us.$el.offsetLeft,
+                this.$refs.contactus.$el.offsetLeft
+
+            ];
+            console.log(this.show_arr)
+            })
         },
-        scrollPage(i){
-            var distance =  this.$store.state.innerWidth*i;
-            var duration_time = Math.abs(i - this.preindex)*100
-            this.$jquery(".index_box").animate({ scrollLeft: distance}, duration_time);
-            this.preindex = i
+        first_page_transform_style() {
+            var rotate_constant =
+                this.scroll_left > this.$store.state.innerWidth * 0.7
+                    ? this.$store.state.innerWidth * 0.7
+                    : this.scroll_left;
+            var rotate = rotate_constant / 250 > 1 ? rotate_constant / 250 : 1;
+            return (
+                "rotate(" + rotate_constant / 20 + "deg) scale(" + rotate + ")"
+            );
         },
-        isScrolledThisItem(i){
-            return this.scroll_left >= this.$store.state.innerWidth*i;
+        secret_page_scroll() {
+            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[6]))/this.$store.state.innerWidth*100
         },
-        scroll(v){
+        phone_soft_page_scroll() {
+            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[7]))/this.$store.state.innerWidth*100
+        },
+        why_choose_page_scroll() {
+            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[8]))/this.$store.state.innerWidth*100
+        },
+        contact_page_scroll() {
+            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[9]))/this.$store.state.innerWidth*100
+        },
+        
+        third_page_position() {
+            return this.$nextTick(()=>{
+                var position_x = (this.scroll_left - this.$refs.third_path.$el.offsetLeft) * .2
+                return position_x;
+            })
+        },
+        scrollPage(i) {
+            console.log(i)
+            var distance = this.show_arr[i]
+            console.log(distance)
+            // var duration_time = Math.abs(i - this.preindex)*300
+            this.$jquery(".index_box").animate({ scrollLeft: distance }, 1000);
+            this.preindex = i;
+        },
+        isScrolledThisItem(i) {
+            return this.scroll_left >= this.$store.state.innerWidth * i;
+        },
+        scroll(v) {
             var scroll_left = v.target.scrollLeft;
-            console.log(scroll_left)
-            this.scroll_left = scroll_left
-            // :style="{transform:'rotate('+scroll_left+'deg) scale(2.5)' }"
-            var deg =(scroll_left > this.$store.state.innerWidth ? this.$store.state.innerWidth * 0.7 : scroll_left) / 10;
-            // this.$jquery(".right_logo_box").css("transform", 'rotate('+ deg +'deg)')
+            this.scroll_left = scroll_left;
+            bus.$emit("scroll", scroll_left)
+            if(scroll_left > this.most_scroll){
+               this.most_scroll = scroll_left
+            }
+            console.log(this.most_scroll)
+            var deg =
+                (scroll_left > this.$store.state.innerWidth
+                    ? this.$store.state.innerWidth * 0.7
+                    : scroll_left) / 10;
         },
-        init(){
-            this.setHeightAndPhoneOrPc()
+        init() {
+            this.setHeightAndPhoneOrPc();
             this.watchOnresize();
         },
         watchOnresize() {
             window.onresize = this.setHeightAndPhoneOrPc;
         },
-        getAllPagesWidth(){
-
-        },
+        getAllPagesWidth() {},
         setHeightAndPhoneOrPc() {
             var height_ = innerHeight;
-            var width_ = innerWidth
+            var width_ = innerWidth;
             this.$store.state.innerHeight = height_;
             this.$store.state.innerWidth = width_;
             this.$store.state.pc_or_phone = pcOrPhone();
-        },
+        }
     },
     data() {
         return {
+            secret_position_x: 0,
+            show_arr:[],
+            inner_width:0,
+            most_scroll: 0,
+            show_third_img: true,
+            show_third_img_2: true,
             scroll_left: 0,
             preindex: 0,
+            max_width: 0,
             navigation_arr: [
                 "Home",
-                "About",
+                "Slogon",
                 "Works",
-                "Social",
-                "Shop",
-                "Services",
-                "Contact"
+                "Company Introduction",
+                "Products",
+                "Ketchupbox",
+                "Secret Garden",
+                "Secret",
+                "Phone Software",
+                "Contact Us"
             ]
         };
     }
@@ -106,20 +209,21 @@ export default {
 </script>
 <style lang='less'>
 @bottom_border_color: #ddd;
-@orange:orange;
-@gray:gray;
-
+@orange: #fb6833;
+@gray: gray;
+@blue:rgba(29, 24, 107, 1.0);
 .index_box {
-    .first_page{
-        .right_logo_box{
-            background: url("../../../static/img/back2.jpg");
-            background-size: 100%;
-            
-        }
+    .button_app{
+        padding: 20px;
+        color: #fff;
+        font-size: 20px;
+        background: @orange;
+        border-radius: 4px;
+        
     }
     // head
-    .head_position{
-        img{
+    .head_position {
+        img {
             width: 200px;
         }
         position: fixed;
@@ -130,26 +234,26 @@ export default {
     }
     // 滚动
     .navigation_positoin {
-        .navigation_arr_div{
-            .squre_point{
+        .navigation_arr_div {
+            .squre_point {
                 width: 4px;
                 height: 4px;
                 background: @gray;
                 left: -2.5px;
                 bottom: -2.5px;
-                &.already_rolled{
+                &.already_rolled {
                     background: @orange;
                     border-radius: 50%;
                 }
             }
             border-bottom: 1px solid @gray;
-            &.border_bottom_transparent{
+            &.border_bottom_transparent {
                 border-bottom: 1px solid transparent;
             }
-            .text{
-                color:#fff;
+            .text {
+                color: #ddd;
             }
-            .orange_text{
+            .orange_text {
                 color: @orange;
             }
         }
@@ -159,7 +263,7 @@ export default {
         z-index: 1002;
         transition: 0.4s;
         transform: translateX(-50%);
-        .bottom_orange_border{
+        .bottom_orange_border {
             height: 1px;
             background: @orange;
             bottom: 0;

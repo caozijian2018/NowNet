@@ -28,8 +28,17 @@ body {
 .gray {
   color: rgb(50, 50, 50);
 }
+.font_size_40{
+  font-size: 40px;
+}
 .font_size_50{
   font-size: 50px;
+}
+.pc_margin_top-70px{
+  margin-top: -70px;
+}
+.margin_top_200px{
+  margin-top: -200px
 }
 .font_size_60{
   font-size: 60px;
@@ -657,6 +666,12 @@ html {
 
 /* 小于800 的尺寸 */
 @media screen and (max-width:800px) {
+  .pc_margin_top-70px{
+    margin-top: 0px;
+  }
+  .phone_margin_top_0{
+    margin-top: 0;
+  }
   .el-message {
     width: 90%;
 

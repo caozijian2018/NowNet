@@ -15,10 +15,10 @@
                     <div
                         class="width_100"
                     >
-                        <h1 class="margin_bottom_15 transform_duration1 phone_transilateX2">
+                        <h1 class="margin_bottom_15 transform_duration1 transilateX2 phone_transilateX2">
                             Digital Content
                         </h1>
-                        <div class="transform_duration2 phone_transilate_X1">
+                        <div class="transform_duration2 transilateY2 phone_transilate_X1">
                             With our high-quality content team, we are able to provide
                             premium subscription services to global mobile users. We have exclusive and 
                             attractive content and it is of various kinds, catering to the need of all kinds of users. 
@@ -50,7 +50,7 @@ export default {
             background-color: #77787c;
             background: url("../../static/img/mountains.jpeg") no-repeat;
             background-size: 900px auto;
-            font-size: 68px;
+            font-size: 40px;
             // line-height: 72px;
             -webkit-background-clip: text;
             background-position: 20% center;

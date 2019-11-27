@@ -20,11 +20,11 @@
             <products ref="products" :class="{transition_back: isTransitionBack(5)}"></products>
             <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></secret-garden>
             <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: isTransitionBack(7)}"></phone-soft-ware>
-            <why-choose-us  :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}" ref="why_choose_us"></why-choose-us>
-            <contactus  :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ref="contactus"></contactus>
+            <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}"></why-choose-us>
+            <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus>
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
-        <div class="navigation_positoin width_50 phone_none" >
+        <div class="navigation_positoin width_50 phone_none display_none" >
             <div class="display_flex flex_jusify_space">
                 <div
                     v-for="(item,index) in navigation_arr"
@@ -45,7 +45,7 @@
             </div>
             <div
                 class="bottom_orange_border position_absolute"
-                :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length)+'%'}"
+                :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length + 3600)+'%'}"
             ></div>
         </div>
     </div>
@@ -86,7 +86,6 @@ export default {
             this.inner_width = this.$store.state.innerWidth / 2;
             console.log(this.$store.state.innerWidth);
             console.log(this.$store.state.innerHeight);
-
             this.inner_height = this.$store.state.innerHeight / 2;
             this.sortModuleOffset();
         });
@@ -244,8 +243,8 @@ export default {
                 "Products",
                 "Ketchupbox",
                 "Secret Garden",
-                "Secret",
                 "Phone Software",
+                "Why Choose Us",
                 "Contact Us"
             ]
         };

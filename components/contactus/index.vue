@@ -45,7 +45,7 @@
                         <div class="width_100 transform_duration2 transilate-Y2 gray_1">
                             Address：No.8, 11/F, HongHui Industrial Building, No. 29,<br>
                             Liuhe Street, Xinpu Gang, Kowloon, Hong Kong  <br>
-                            E-Mail: customer@nownetmobi.com
+                           <a href="" style="color: skyblue">E-Mail: customer@nownetmobi.com</a>  
                         </div>
                     </div>
                     

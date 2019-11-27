@@ -34,7 +34,7 @@
             >
                 <div class="width_30 phone_width_90 phone_margin">
                     <h1
-                        class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
+                        class="font_size_50 pc_margin_top-70px margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
                     >Secret Garden</h1>
                 </div>
                 <div class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px">
@@ -140,7 +140,7 @@ export default {
             background-color: #77787c;
             background: url("../../static/img/mountains.jpeg") no-repeat;
             background-size: 900px auto;
-            font-size: 68px;
+            font-size: 40px;
             -webkit-background-clip: text;
             background-position: 20% center;
             -webkit-text-fill-color: transparent;

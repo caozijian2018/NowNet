@@ -12,6 +12,7 @@
             </div>
             <div
                 :style="{width: $store.state.innerWidth + 'px'}"
+                style="margin-left:-1px"
                 class="flex_1 height_100 margin_auto flex_align_center flex_center display_flex"
             >
                 <div class="width_30 display_flex flex_column">
@@ -20,7 +21,7 @@
                 </div>
                 <div class="width_50 font_size_8 line_height_27px">
                     <div class="display_flex flex_jusify_space">
-                        <div class="flex_1 overflow_hidden position_relative third_page_back">
+                        <div class="flex_1 overflow_hidden position_relative third_page_back" style="font-size:0">
                             <img
                                 src="../../static/img/ice.jpeg"
                                 class="height_100 full_div"
@@ -29,6 +30,7 @@
                             />
                             <img
                                 src="../../static/img/n.png"
+                                style="box-sizing:border-box;vertical-align:left;display:block"
                                 class="width_100 position_relative vertical_middle z_index100"
                             />
                         </div>
@@ -79,9 +81,9 @@ export default {
             transform-origin:left top;
             transform: skew(-16deg);
         }
-        background: @blue;
+        background: rgba(34, 21, 109, 1.0);
         .back_blue{
-            background: @blue
+            background: rgba(34, 21, 109, 1.0);
         };
     }
 </style>

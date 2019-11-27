@@ -11,22 +11,16 @@
             </div>
             <div class="position_relative font_size_8 gray_1 phone_width_90 phone_margin line_height_27px">
                 <div class="display_flex flex_jusify_space transform_duration1 transilate-Y2 phone_block">
-                    <div class="width_30 phone_width_90 phone_margin">
-                        Technology First, User First.
-                        <br> 
-                        Our Mission
-                        <br> 
-                        Let worldwide users enjoy our products.
-                        <br> 
-                        Our Target
-                        <br> 
-                        To be a world-leading company.
+                    <div class="width_40 phone_width_90 phone_margin">
+                        Our Slogon Technology First, User First. <br> 
+                        Our Mission Let worldwide users enjoy our products.<br> 
+                        Our Target To be a world-leading company.
                     </div>
                     <div class="width_50 phone_width_90 phone_margin z_index100 transform_duration1 transilate-Y3">
                         <img src="../../static/img/office.jpeg" class="width_100" alt />
                     </div>
                 </div>
-                <div class="text_center">
+                <div class="text_center margin_top_200px phone_margin_top_0">
                     <img
                         src="../../static/img/girl.jpeg"
                         class="width_30 phone_width_90 transiform_y_100px transform_duration2 transilateY3"

@@ -16,7 +16,7 @@
                 >
                     <h1
                         :style="{ transform: white_color_text_transform() }"
-                        class="top_text_left font_size_50 font_weight_800 text_center width_100 white"
+                        class="top_text_left font_size_40 font_weight_800 text_center width_100 white"
                     >Phone Software</h1>
                 </div>
                 <div
@@ -24,7 +24,7 @@
                 >
                     <h1
                         :style="{ transform: orange_color_text_transform() }"
-                        class="top_text_right font_size_50 font_weight_800 text_center width_100 orange"
+                        class="top_text_right font_size_40 font_weight_800 text_center width_100 orange"
                     >Phone Software</h1>
                 </div>
             </div>
@@ -87,14 +87,14 @@ export default {
     methods: {
         white_color_text_transform() {
             return (
-                "skew(17deg) translateX(" +
+                "skew(24deg) translateX(" +
                 (50 + this.translatePersent / 2) +
                 "%)"
             );
         },
         orange_color_text_transform() {
             return (
-                "skew(17deg) translateX(" +
+                "skew(24deg) translateX(" +
                 (this.translatePersent / 2 - 50) +
                 "%)"
             );
@@ -121,17 +121,17 @@ export default {
     }
     .top_text_left {
         transform-origin: right top;
-        transform: rotate(-17deg) translateX(50%);
+        transform: rotate(-24deg) translateX(50%);
     }
     .top_text_right {
         transform-origin: left top;
-        transform: rotate(-17deg) translateX(-50%);
+        transform: rotate(-24deg) translateX(-50%);
     }
     .top_text_right {
     }
     .rotate_triangle {
         transform-origin: center bottom;
-        transform: translateX(-50%) skew(-17deg);
+        transform: translateX(-50%) skew(-24deg);
     }
     .orange {
         color: @orange;
@@ -148,7 +148,7 @@ export default {
             background-color: #77787c;
             background: url("../../static/img/mountains.jpeg") no-repeat;
             background-size: 900px auto;
-            font-size: 68px;
+            font-size: 40px;
             -webkit-background-clip: text;
             background-position: 20% center;
             -webkit-text-fill-color: transparent;

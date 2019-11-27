@@ -12,7 +12,7 @@
             </div>
             <div class="position_relative font_size_8 width_60 phone_margin phone_width_90 line_height_27px">
                 <div class="display_flex flex_jusify_space">
-                    <div class="width_100 gray_1 transform_duration1 phone phone_transilateX2">
+                    <div class="width_100 gray_1 transform_duration1 phone transilate-Y2 phone_transilateX2">
                         <!-- <h1 class="margin_bottom_15">Digital Content</h1> -->
                         Ketchupbox is a premium subscription service. The service consists
                         of multiple categories of funny content, including funny videos,
@@ -41,7 +41,7 @@ export default {
         background-color: #77787c;
         background: url("../../static/img/mountains.jpeg") no-repeat;
         background-size: 900px auto;
-        font-size: 68px;
+        font-size: 40px;
         // line-height: 72px;
         -webkit-background-clip: text;
         background-position: 20% center;

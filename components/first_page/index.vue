@@ -15,18 +15,19 @@
                     love.
                 </div>
             </div>
-            <div class="width_50 right_logo_box position_relative phone_none">
-                <div :style="{ transform: transfromStyle, backgroundSize: transformStyleBack + '%'}" class="width_100 position_relative overflow_hidden">
+             <div class="width_50 right_logo_box position_relative ">
+                <!-- <img
+                    src="../../static/img/back2.jpg"
+                    style="border-radius:200px"
+                    class="height_100 full_div"
+                    alt
+                /> -->
+                <div :style="{transform: transfromStyle}"  class="background_image  width_100">
                     <img
-                        src="../../static/img/back2.jpg"
-                        style="border-radius:200px"
-                        class="height_100 first_back"
+                        src="../../static/img/logo1.png"
+                        class="width_100"
+                         
                         alt
-                    />
-                    <img
-                        src="../../static/img/logo_left.png"
-                        class="width_100 vertical_middle full_div"
-                        style="border: 0"
                     />
                 </div>
             </div>
@@ -48,9 +49,10 @@ export default {
         transform: translateX(80%);
     }
     .background_image {
-        background: url("../../static/img/back2.jpg");
-        background-position: -36% 0;
+        background: url("../../static/img/ice.jpeg");
+        background-position: 10% 50%;
         background-repeat: no-repeat;
+        background-size: 100%;
     }
 }
 </style>

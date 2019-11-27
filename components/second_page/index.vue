@@ -12,7 +12,9 @@
             <div class="position_relative font_size_8 gray_1 phone_width_90 phone_margin line_height_27px">
                 <div class="display_flex flex_jusify_space transform_duration1 transilate-Y2 phone_block">
                     <div class="width_40 phone_width_90 phone_margin">
-                        Make our products loved by users worldwide. To be a world-leading company.
+                        Technology first, user first. <br>
+                        Develop good products.<br>
+                        To be a world leading company.
                     </div>
                     <div class="width_50 phone_width_90 phone_margin z_index100 transform_duration1 transilate-Y3">
                         <img src="../../static/img/office.jpeg" class="width_100" alt />

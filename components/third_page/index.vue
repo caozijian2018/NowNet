@@ -17,11 +17,11 @@
             >
                 <div class="width_30 display_flex flex_column">
                     <h1 class="font_size_50 margin_bottom_15 font_size_100 align_self_start">Works</h1>
-                    <div class="button_app display_inline_block align_self_start">xxx</div>
+                    <div class="button_app display_inline_block align_self_start"></div>
                 </div>
                 <div class="width_50 font_size_8 line_height_27px">
                     <div class="display_flex flex_jusify_space">
-                        <div class="flex_1 overflow_hidden position_relative third_page_back" style="font-size:0">
+                        <div class="flex_1 overflow_hidden position_relative third_page_back" style="font-size:0;">
                             <img
                                 src="../../static/img/ice.jpeg"
                                 class="height_100 full_div"
@@ -64,6 +64,7 @@ export default {
     // 第三页
     @import "../../assets/css/current_theme";
     .phone_skew_box{
+
         transform:skew(0 , -12deg);
         .button{
             transform:skew(0 , 12deg);
@@ -77,6 +78,10 @@ export default {
         background-size: 200%;
     }
     .third_page {
+        .full_div{
+            left: 1px;
+            right: 1px;
+        }
         .rotate_triangle {
             transform-origin:left top;
             transform: skew(-16deg);

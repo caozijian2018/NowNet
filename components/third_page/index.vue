@@ -17,7 +17,7 @@
             >
                 <div class="width_30 display_flex flex_column">
                     <h1 class="font_size_50 margin_bottom_15 font_size_100 align_self_start">Works</h1>
-                    <div class="button_app display_inline_block align_self_start"></div>
+                    <!-- <div class="button_app display_inline_block align_self_start"></div> -->
                 </div>
                 <div class="width_50 font_size_8 line_height_27px">
                     <div class="display_flex flex_jusify_space">

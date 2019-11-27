@@ -9,16 +9,20 @@
                 class="rotate_triangle height_100 width_100 display_flex position_absolute"
                 style="bottom:0"
             >
-                <div class="height_100 flex_1 gray_back overflow_hidden display_flex flex_align_center">
+                <div
+                    class="height_100 flex_1 gray_back overflow_hidden display_flex flex_align_center"
+                >
                     <h1
                         :style="{ transform: white_color_text_transform() }"
-                        class="top_text_left  font_size_50 font_weight_800 text_center width_100  orange"
+                        class="top_text_left font_size_50 font_weight_800 text_center width_100 orange"
                     >Secret Garden</h1>
                 </div>
-                <div class="height_100 flex_1 blue_back  overflow_hidden display_flex flex_align_center">
+                <div
+                    class="height_100 flex_1 blue_back overflow_hidden display_flex flex_align_center"
+                >
                     <h1
                         :style="{ transform: orange_color_text_transform() }"
-                        class="top_text_right  font_size_50 font_weight_800 text_center width_100 white"
+                        class="top_text_right font_size_50 font_weight_800 text_center width_100 white"
                     >Secret Garden</h1>
                 </div>
             </div>
@@ -37,15 +41,16 @@
                         class="font_size_50 pc_margin_top-70px margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
                     >Secret Garden</h1>
                 </div>
-                <div class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px">
+                <div
+                    class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px"
+                >
                     <div class="display_flex flex_jusify_space">
                         <div class="width_100 transform_duration2 transilate-Y2">
                             <!-- <h1 class="margin_bottom_15">Digital Content</h1> -->
                             Secret Garden provides high-quality pleasing beauty videos and
                             pictures to subscribers. The service consists of various kinds of
-                            beautiful girls, and it caters to the taste of all kinds of
-                            people. Users can browse the content online and the content is
-                            updated continuously.
+                            beautiful girls. Users can browse the content online and the
+                            content is updated regularly.
                             <!-- {{secret_page_scroll()}} -->
                         </div>
                     </div>

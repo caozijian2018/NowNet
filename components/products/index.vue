@@ -2,22 +2,31 @@
     <div
         class="height_100 overflow_hidden products display_inline_block"
         ref="fourth_path"
-        :style="{ width: $store.state.innerWidth + 'px' ,height: $store.state.is_pc ? 'height':'auto'}"
+        :style="{
+      width: $store.state.innerWidth + 'px',
+      height: $store.state.is_pc ? 'height' : 'auto'
+    }"
     >
         <div
             class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
         >
             <div class="width_30 phone_width_90 phone_margin">
-                <h1 class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 phone phone_transilate_X2">Ketchupbox</h1>
+                <h1
+                    class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 phone phone_transilate_X2"
+                >Ketchupbox</h1>
             </div>
-            <div class="position_relative font_size_8 width_60 phone_margin phone_width_90 line_height_27px">
+            <div
+                class="position_relative font_size_8 width_60 phone_margin phone_width_90 line_height_27px"
+            >
                 <div class="display_flex flex_jusify_space">
-                    <div class="width_100 gray_1 transform_duration1 phone transilate-Y2 phone_transilateX2">
+                    <div
+                        class="width_100 gray_1 transform_duration1 phone transilate-Y2 phone_transilateX2"
+                    >
                         <!-- <h1 class="margin_bottom_15">Digital Content</h1> -->
                         Ketchupbox is a premium subscription service. The service consists
-                        of multiple categories of funny content, including funny videos,
-                        funny pictures, wallpapers and ringtones. Our service has brought
-                        happiness to over 20,000 users globally.
+                        of multiple categories of funny content, including videos, pictures,
+                        wallpapers and ringtones. Our service is enjoyed by over 20,000
+                        users globally.
                     </div>
                 </div>
                 <div class="text_center transform_duration1 transilateY1 margin_top_10">

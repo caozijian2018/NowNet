@@ -135,7 +135,7 @@ export default {
             background-color: #77787c;
             background: url("../../static/img/mountains.jpeg") no-repeat;
             background-size: 900px auto;
-            font-size: 68px;
+            font-size: 41px;
             -webkit-background-clip: text;
             background-position: 20% center;
             -webkit-text-fill-color: transparent;

@@ -1,6 +1,7 @@
 <template>
-    <div class="height_100 phone_soft_box display_inline_block overflow_hidden"
-        :style="{height: $store.state.is_pc ? 'height_100':'auto'}"
+    <div
+        class="height_100 phone_soft_box display_inline_block overflow_hidden"
+        :style="{ height: $store.state.is_pc ? 'height_100' : 'auto' }"
     >
         <div
             class="display_inline_block left_squre height_100 position_relative phone_none"
@@ -32,7 +33,7 @@
         <div
             class="height_100 overflow_hidden secret_box white display_inline_block"
             ref="fourth_path"
-            :style="{ width: $store.state.innerWidth + 'px'}"
+            :style="{ width: $store.state.innerWidth + 'px' }"
         >
             <div
                 class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
@@ -42,17 +43,16 @@
                         class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
                     >Phone Software</h1>
                 </div>
-                <div class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px">
-                    <div class="display_flex  flex_jusify_space">
+                <div
+                    class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px"
+                >
+                    <div class="display_flex flex_jusify_space">
                         <div class="width_100 transform_duration2 transilate-Y2 gray_1">
-                            We have a tech team that is devoted to mobile phone applications.
-                            With our data recovery app, users can recover their lost data with
-                            simple clicks. What they need to do is to select the type and
-                            location of your data, after auto-scanning, and they can find
-                            their lost data recovered. With our data transfer app, users can
-                            transfer their mobile data freely though different devices, even
-                            through different operating systems. With our phone managing app,
-                            users can manage their phone memory and clear virus.
+                            We have designed and developed a data recovery app, a data
+                            transfer app and a phone managing app. With our apps, users can
+                            recover their lost data with simple clicks, transfer their mobile
+                            data freely though different devices, manage their phone memory
+                            and clear virus.
                         </div>
                     </div>
                     <div class="text_center transform_duration1 transilateY1 margin_top_10">

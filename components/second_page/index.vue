@@ -7,14 +7,12 @@
             class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
         >
             <div class="width_30 phone_width_90 phone_margin phone_center_text">
-                <h1 class="font_size_50 margin_bottom_15 second_page_h1">Our Slogon</h1>
+                <h1 class="font_size_50 margin_bottom_15 second_page_h1">Our Mission</h1>
             </div>
             <div class="position_relative font_size_8 gray_1 phone_width_90 phone_margin line_height_27px">
                 <div class="display_flex flex_jusify_space transform_duration1 transilate-Y2 phone_block">
                     <div class="width_40 phone_width_90 phone_margin">
-                        Our Slogon Technology First, User First. <br> 
-                        Our Mission Let worldwide users enjoy our products.<br> 
-                        Our Target To be a world-leading company.
+                        Make our products loved by users worldwide. To be a world-leading company.
                     </div>
                     <div class="width_50 phone_width_90 phone_margin z_index100 transform_duration1 transilate-Y3">
                         <img src="../../static/img/office.jpeg" class="width_100" alt />

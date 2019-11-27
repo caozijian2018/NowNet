@@ -1,6 +1,7 @@
 <template>
-    <div class="height_100 choose_us display_inline_block overflow_hidden"
-        :style="{height: $store.state.is_pc ? 'height_100':'auto'}"
+    <div
+        class="height_100 choose_us display_inline_block overflow_hidden"
+        :style="{ height: $store.state.is_pc ? 'height_100' : 'auto' }"
     >
         <div
             class="display_inline_block left_squre height_100 position_relative phone_none"
@@ -42,18 +43,16 @@
                         class="font_size_50 margin_bottom_15 fourth_page_h1 pc_margin_top-70px transform_duration1 transilateX3"
                     >Why Choose Us?</h1>
                 </div>
-                <div class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px">
+                <div
+                    class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px"
+                >
                     <div class="display_flex flex_jusify_space">
                         <div class="width_100 transform_duration2 transilate-Y2">
                             <!-- <h1 class="margin_bottom_15">Digital Content</h1> -->
-                            （1） Innovation and technology are the two major pillars of our
-                            company. We rely on innovative products and professional technical
-                            teams to bring development and transformation to the world. 
-                            <br>
-                            （2）Putting the demand of users first, we embrace the latest trend in
-                            industry and keep abreast with the time. As a passionate company,
-                            we always do everything we can to provide the best products to
-                            users.
+                            We have innovative products and professional technical teams to <br>
+                            bring development and transformation to the world. Putting the<br>
+                            demand of users first, we embrace the latest trend in industry and<br>
+                            keep abreast with the time.
                             <!-- {{secret_page_scroll()}} -->
                         </div>
                     </div>

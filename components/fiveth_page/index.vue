@@ -94,7 +94,7 @@ export default {
 @import "../../assets/css/current_theme";
 .fiveth_box {
     .width_100px {
-        width: 100px;
+        width: 130px;
     }
     background: @blue;
     .fourth_page_h1 {

@@ -38,7 +38,7 @@
             >
                 <div class="width_30 phone_width_90 phone_margin">
                     <h1
-                        class="font_size_50 pc_margin_top-70px margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
+                        class="display_none phone_block font_size_50 pc_margin_top-70px margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
                     >Secret Garden</h1>
                 </div>
                 <div

@@ -29,7 +29,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'video' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon3.ico' }
     ]
   },
   /*

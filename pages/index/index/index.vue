@@ -258,14 +258,14 @@ export default {
             show_arr_scroll_y:[],
             navigation_arr: [
                 "Home",
-                "Slogon",
-                "Works",
+                "Mission",
+                "About Us",
                 "Company Introduction",
                 "Products",
                 "Ketchupbox",
                 "Secret Garden",
                 "Phone Software",
-                "Why Choose Us",
+                "Why Us",
                 "Contact Us"
             ]
         };

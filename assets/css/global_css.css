@@ -12,6 +12,9 @@ body {
 .img_blue{
   background: rgba(3, 81, 87, 1.0);
 }
+.green{
+  color: rgba(4, 181, 169, 1.0)
+}
 .img_green{
   background: rgba(161, 214, 137, 1.0);
 }

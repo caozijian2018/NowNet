@@ -7,7 +7,6 @@
             class="display_inline_block left_squre height_100 position_relative phone_none"
             style="width: 900px"
         >
-            <!-- <img src="../../static/img/triangle.png" class="height_100" alt /> -->
             <div
                 class="rotate_triangle height_100 width_100 display_flex position_absolute"
                 style="bottom:0"
@@ -42,11 +41,28 @@
                     <h1
                         class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateX3"
                     >Phone Software</h1>
+                    <div class="font_size_8 line_height_25px gray_1">
+                        We have a tech team that is devoted to mobile phone applications.
+                        Our target is to make our applications available and useful for all
+                        netizens.
+                    </div>
                 </div>
                 <div
-                    class="position_relative font_size_8 width_60 phone_width_90 phone_margin line_height_27px"
+                    class="position_relative font_size_8 width_60 phone_width_90 phone_margin wrop display_flex flex_jusify_space phone_block line_height_27px"
                 >
-                    <div class="display_flex flex_jusify_space">
+
+                    <div class="box_soft_desc width_48 box_szing" v-for="(item, index) in arr" :class="{margin_top_20: index > 1}" :key="item.title">
+                        <div class="green margin_bottom_15">
+                            <img :src="item.img_src" class="vertical_middle" style="width:30px;" alt="">
+                            <span class="font_size_20">
+                                {{item.title}}
+                            </span>
+                        </div>
+                        <div>
+                            {{item.desc}} 
+                        </div>
+                    </div>
+                    <!-- <div class="display_flex flex_jusify_space">
                         <div class="width_100 transform_duration2 transilate-Y2 gray_1">
                             We have designed and developed a data recovery app, a data
                             transfer app and a phone managing app. With our apps, users can
@@ -61,7 +77,7 @@
                             class="width_20 phone_width_100 transiform_y_100px"
                             alt
                         />
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -81,7 +97,30 @@ export default {
     },
     data() {
         return {
-            scroll: 0
+            scroll: 0,
+            arr: [
+                {
+                    title: "Data Recovery App",
+                    desc: "With our data recovery app, users can recover their lost data with simple clicks. What they need to do is to select the type and location of your data, after auto-scanning, and they can find their lost data recovered. ",
+                    img_src: require("../../static/img/data.svg")
+                },
+                {
+                    title: "Data Transfer App",
+                    desc: "With our data transfer app, users can transfer their mobile data freely and seamlessly between IOS and Android devices. Data transfer and date backup are realized simply without any difficulty. ",
+                    img_src: require("../../static/img/datetrasilate.svg")
+                },
+                {
+                    title: "Phone Managing App",
+                    desc: "With our phone managing app, users can manage their phone memory and keep their phones clean, fast, safe. Safe and private phones are guaranteed for a higher efficiency, and it enjoys high reputation in the industry.",
+                    img_src: require("../../static/img/databack.svg")
+                },
+                {
+                    title: "Antivirus App",
+                    desc: "With our antivirus app, high-risk applications in users’ phones can be detected easily from the perspective of Trojan viruses, extremely high power-consumption, extremely high traffic-consumption, malicious advertising, etc.",
+                    img_src: require("../../static/img/kill.svg")
+                }
+
+            ],
         };
     },
     methods: {
@@ -116,6 +155,14 @@ export default {
 <style lang="less">
 @import "../../assets/css/current_theme";
 .phone_soft_box {
+    .box_soft_desc{
+        padding: 20px;
+        border: 1px solid #999999;
+        color: #666666;
+        &:hover{
+            background: #fff;
+        }
+    }
     .left_squre {
         background: @app_gray;
     }
@@ -143,7 +190,7 @@ export default {
         background: @app_gray;
     }
     .secret_box {
-        background: @app_gray;
+        background: rgba(248, 248, 249, 1.0);
         .fourth_page_h1 {
             background-color: #77787c;
             background: url("../../static/img/mountains.jpeg") no-repeat;

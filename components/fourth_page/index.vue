@@ -11,11 +11,11 @@
             class="width_90 height_100 phone_width_90 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
         >
             <div class="flex_1">
-                <h1 class="page_h1 transform_duration1 transilateX2">About us</h1>
+                <h1 class="page_h1 transform_duration1 transilateX2">Introduction</h1>
                 <div
                     class="transform_duration1 transilateX3 font_size_8 gray_1 transform_duration1 phone transilate-Y2 phone_transilateX2"
                 >
-                    Brief Introduction Nownetmobi is an Internet-based technology-driven
+                    Nownetmobi is an Internet-based technology-driven
                     innovative company. We know the Internet users well, and users’ demand
                     is our first priority.
                 </div>

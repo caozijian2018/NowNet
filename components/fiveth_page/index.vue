@@ -44,7 +44,7 @@
                             class="width_100px transform_duration1 transilateX2"
                             alt
                         />
-                        <div class="phone_show">
+                        <div class="">
                         </div>
                         <img
                             src="../../static/img/newimg/logo3.png"

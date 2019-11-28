@@ -85,7 +85,7 @@ export default {
         background-color: #77787c;
         background: url("../../static/img/ice.jpeg") no-repeat;
         background-size: 900px auto;
-        font-size: 68px;
+        font-size: 42px;
         // line-height: 72px;
         -webkit-background-clip: text;
         background-position: 40% center;

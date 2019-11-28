@@ -15,7 +15,9 @@ import jquery from "jquery";
 Vue.prototype.$jquery = jquery;
 export default {
     mounted(){
-        
+        window.onresize=function(){
+            history.go(0)
+        }
     },
 };
 </script>

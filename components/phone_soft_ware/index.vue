@@ -51,7 +51,7 @@
                     class="position_relative font_size_8 width_65 phone_width_90 phone_margin wrop display_flex flex_jusify_space phone_block line_height_27px"
                 >
 
-                    <div class="box_soft_desc width_48 box_szing" v-for="(item, index) in arr" :class="{margin_top_20: index > 1}" :key="item.title">
+                    <div class="box_soft_desc width_48 box_szing phone_width_100 margin_top_20" v-for="(item) in arr"   :key="item.title">
                         <div class="green margin_bottom_15">
                             <img :src="item.img_src" class="vertical_middle" style="width:30px;" alt="">
                             <span class="font_size_20">

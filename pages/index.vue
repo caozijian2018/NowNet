@@ -10,9 +10,13 @@ import Vue from "vue";
 // import "../util/filter";
 // import "../util/msg";
 import "../util/es62es5";
+// import scrollFun from "../util/watch_scroll";
 import jquery from "jquery";
 Vue.prototype.$jquery = jquery;
 export default {
+    mounted(){
+        
+    },
 };
 </script>
 

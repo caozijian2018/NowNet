@@ -1,6 +1,6 @@
 <template>
     <div
-        class="index_box height_100 overflow_x_scroll phone_flex phone_column width_100 nscrol position_relative"
+        class="index_box height_100 overflow_x_scroll overflow_y_hidden phone_flex phone_column width_100 nscrol position_relative"
         @scroll="scroll"
         :style="{height: $store.state.is_pc ? '100%' : $store.state.innerHeight+'px'}"
     >
@@ -24,7 +24,7 @@
             <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus>
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
-        <div class="navigation_positoin width_50 phone_none display_none" >
+        <div class="navigation_positoin width_50 phone_none " >
             <div class="display_flex flex_jusify_space">
                 <div
                     v-for="(item,index) in navigation_arr"
@@ -45,7 +45,7 @@
             </div>
             <div
                 class="bottom_orange_border position_absolute"
-                :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length + 3600)+'%'}"
+                :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length + 3000)+'%'}"
             ></div>
         </div>
     </div>
@@ -63,7 +63,7 @@ import secretGarden from "../../../components/secret_garden";
 import phoneSoftWare from "../../../components/phone_soft_ware";
 import whyChooseUs from "../../../components/why_choose_us";
 import contactus from "../../../components/contactus";
-
+import scrollFunc from "../../../util/watch_scroll";
 
 import bus from "../../../util/bus"
 
@@ -88,9 +88,26 @@ export default {
             console.log(this.$store.state.innerHeight);
             this.inner_height = this.$store.state.innerHeight / 2;
             this.sortModuleOffset();
+            this.whatchScroll();
         });
     },
     methods: {
+        whatchScroll(){
+             var num = 0;
+            window.onmousewheel = document.onmousewheel =  (e)=>{
+                var is_to_top = scrollFunc(e)
+                var scroll_left = this.$jquery(".index_box")[0].scrollLeft;
+                e.preventDefault()
+                if (is_to_top > 0){
+                    scroll_left +=4;
+                    // this.$jquery(".index_box").css('scrollLeft', 3000+"px");
+                }else{
+                    scroll_left -= 4;
+                }
+                this.$jquery(".index_box").animate({ scrollLeft: scroll_left }, 0);
+
+            };
+        },
         isTransitionBack(i){
            return this.$store.state.is_pc ? (this.most_scroll + (this.inner_width)> this.show_arr[i]) : (this.most_scroll_y + (this.inner_height)> this.show_arr_scroll_y[i]);
         },
@@ -100,7 +117,7 @@ export default {
                 var dom = document.querySelectorAll(".max_width_box > div")[i]
                 width += dom.offsetWidth
             }
-            this.max_width = width + 3601;
+            this.max_width = width + 3701;
             this.$nextTick(()=>{
             this.show_arr = [
                 0,
@@ -128,6 +145,8 @@ export default {
                 this.$refs.contactus.$el.offsetTop
             ];
             console.log(this.show_arr)
+          
+
             })
         },
         first_page_transform_style() {
@@ -169,7 +188,9 @@ export default {
         scrollPage(i) {
             console.log(i)
             var distance = this.show_arr[i]
+            console.log(9999)
             console.log(distance)
+
             // var duration_time = Math.abs(i - this.preindex)*300
             this.$jquery(".index_box").animate({ scrollLeft: distance }, 1000);
             this.preindex = i;
@@ -217,7 +238,7 @@ export default {
             var width_ = innerWidth;
             this.$store.state.innerHeight = height_;
             this.$store.state.innerWidth = width_;
-            this.$store.state.pc_or_phone = pcOrPhone();
+            this.$store.state.is_pc = pcOrPhone();
         }
     },
     data() {

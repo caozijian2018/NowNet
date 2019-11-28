@@ -2,8 +2,8 @@
     <div
         class="height_100 overflow_hidden first_page display_inline_block phone_block"
         :style="{
-      width: $store.state.is_pc ? $store.state.innerWidth + 'px' : '100%'
-    }"
+            width: $store.state.is_pc ? $store.state.innerWidth + 'px' : '100%'
+        }"
     >
         <div
             class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex"

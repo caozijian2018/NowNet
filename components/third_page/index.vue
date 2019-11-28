@@ -4,38 +4,41 @@
         :style="{transform: 'translateX('+ -(thirdLeftPagePosition + 200)+'px)' }"
     >
         <!-- <img src="../../../static/img/triangle.png" class="height_100" alt /> -->
-        <div class="height_100 display_flex">
+        <div class="height_100">
             <!-- <img src="../../static/img/triangle.png" class="height_100" alt /> -->
-            <div
-                class="back_blue rotate_triangle height_100" style="width:400px"
-            >
-            </div>
             <div
                 :style="{width: $store.state.innerWidth + 'px'}"
                 style="margin-left:-1px"
                 class="flex_1 height_100 margin_auto flex_align_center flex_center display_flex"
             >
-                <div class="width_30 display_flex flex_column">
-                    <h1 class="font_size_50 margin_bottom_15 font_size_100 align_self_start">Works</h1>
-                    <!-- <div class="button_app display_inline_block align_self_start"></div> -->
-                </div>
-                <div class="width_50 font_size_8 line_height_27px">
-                    <div class="display_flex flex_jusify_space">
-                        <div class="flex_1 overflow_hidden position_relative third_page_back" style="font-size:0;">
-                            <img
-                                src="../../static/img/ice.jpeg"
-                                class="height_100 full_div"
-                                alt
-                                :style="{transform: 'translateX('+ -(thirdLeftPagePosition + 200)+'px)' }"
-                            />
-                            <img
-                                src="../../static/img/n.png"
-                                style="box-sizing:border-box;vertical-align:left;display:block"
-                                class="width_100 position_relative vertical_middle z_index100"
-                            />
+                <div class="height_100 back_blue display_flex width_80 margin_auto">
+                    <div
+                        class="back_blue rotate_triangle height_100 width_30"
+                    >
+                    </div>
+                    <div class="width_30 display_flex flex_align_center">
+                        <h1 class="font_size_50 margin_bottom_15 font_size_100 ">Works</h1>
+                        <!-- <div class="button_app display_inline_block align_self_start"></div> -->
+                    </div>
+                    <div class="width_40 font_size_8 line_height_27px">
+                        <div class="display_flex flex_jusify_space">
+                            <div class="flex_1 overflow_hidden position_relative third_page_back" style="font-size:0;">
+                                <img
+                                    src="../../static/img/ice.jpeg"
+                                    class="height_100 full_div"
+                                    alt
+                                    :style="{transform: 'translateX('+ -(thirdLeftPagePosition + 200)+'px)' }"
+                                />
+                                <img
+                                    src="../../static/img/n.png"
+                                    style="box-sizing:border-box;vertical-align:left;display:block"
+                                    class="width_100 position_relative vertical_middle z_index100"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -86,7 +89,6 @@ export default {
             transform-origin:left top;
             transform: skew(-16deg);
         }
-        background: rgba(34, 21, 109, 1.0);
         .back_blue{
             background: rgba(34, 21, 109, 1.0);
         };

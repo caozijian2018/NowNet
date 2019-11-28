@@ -17,13 +17,13 @@
                         To be a world leading company.
                     </div>
                     <div class="width_50 phone_width_90 phone_margin z_index100 transform_duration1 transilate-Y3">
-                        <img src="../../static/img/mac.png" class="width_90" alt />
+                        <img src="../../static/img/mac.png" class="width_60" alt />
                     </div>
                 </div>
                 <div class="text_center margin_top_200px phone_margin_top_0">
                     <img
                         src="../../static/img/out.png"
-                        class="width_50 phone_width_90 transiform_y_100px transform_duration2 transilateY3"
+                        class="width_40 phone_width_90 transiform_y_100px transform_duration2 transilateY3"
                         alt
                     />
                 </div>

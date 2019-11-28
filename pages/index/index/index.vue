@@ -4,7 +4,7 @@
         @scroll="scroll"
         :style="{height: $store.state.is_pc ? '100%' : $store.state.innerHeight+'px'}"
     >
-        <div class="head_position width_50 box_szing phone_width_100 phone_relative">
+        <div class="head_position width_80 box_szing phone_width_100 phone_relative">
             <img src="../../../static/img/logo.png" alt />
         </div>
         <div

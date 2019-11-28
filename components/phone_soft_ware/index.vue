@@ -39,7 +39,7 @@
             >
                 <div class="width_30 phone_width_90 phone_margin">
                     <h1
-                        class="display_none phone_block font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateY3"
+                        class="phone_block font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateY3"
                     >Phone Software</h1>
                     <div class="font_size_8 line_height_25px gray_1">
                         We have a tech team that is devoted to mobile phone applications.
@@ -58,7 +58,7 @@
                                 {{item.title}}
                             </span>
                         </div>
-                        <div>
+                        <div style="font-size: 14px">
                             {{item.desc}} 
                         </div>
                     </div>

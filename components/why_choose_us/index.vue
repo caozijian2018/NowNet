@@ -58,7 +58,7 @@
                     </div>
                     <div class="text_center transform_duration1 transilateY1 margin_top_10">
                         <img
-                            src="../../static/img/secret.jpeg"
+                            src="../../static/img/secret2.jpeg"
                             class="width_80 transiform_y_100px"
                             alt
                         />

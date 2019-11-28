@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div
-                    class="position_relative font_size_8 width_60 phone_width_90 phone_margin wrop display_flex flex_jusify_space phone_block line_height_27px"
+                    class="position_relative font_size_8 width_65 phone_width_90 phone_margin wrop display_flex flex_jusify_space phone_block line_height_27px"
                 >
 
                     <div class="box_soft_desc width_48 box_szing" v-for="(item, index) in arr" :class="{margin_top_20: index > 1}" :key="item.title">
@@ -102,22 +102,22 @@ export default {
                 {
                     title: "Data Recovery App",
                     desc: "With our data recovery app, users can recover their lost data with simple clicks. What they need to do is to select the type and location of your data, after auto-scanning, and they can find their lost data recovered. ",
-                    img_src: require("../../static/img/data.svg")
+                    img_src: require("../../static/img/3.png")
                 },
                 {
                     title: "Data Transfer App",
                     desc: "With our data transfer app, users can transfer their mobile data freely and seamlessly between IOS and Android devices. Data transfer and date backup are realized simply without any difficulty. ",
-                    img_src: require("../../static/img/datetrasilate.svg")
+                    img_src: require("../../static/img/1.png")
                 },
                 {
                     title: "Phone Managing App",
                     desc: "With our phone managing app, users can manage their phone memory and keep their phones clean, fast, safe. Safe and private phones are guaranteed for a higher efficiency, and it enjoys high reputation in the industry.",
-                    img_src: require("../../static/img/databack.svg")
+                    img_src: require("../../static/img/4.png")
                 },
                 {
                     title: "Antivirus App",
                     desc: "With our antivirus app, high-risk applications in users’ phones can be detected easily from the perspective of Trojan viruses, extremely high power-consumption, extremely high traffic-consumption, malicious advertising, etc.",
-                    img_src: require("../../static/img/kill.svg")
+                    img_src: require("../../static/img/2.png")
                 }
 
             ],

@@ -260,7 +260,7 @@ export default {
                 "Home",
                 "Mission",
                 "About Us",
-                "Company Introduction",
+                "Introduction",
                 "Products",
                 "Ketchupbox",
                 "Secret Garden",

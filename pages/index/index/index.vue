@@ -1,6 +1,6 @@
 <template>
     <div
-        class="index_box height_100 overflow_x_scroll overflow_y_hidden phone_flex phone_column width_100 nscrol position_relative"
+        class="index_box height_100 overflow_x_scroll phone_flex phone_column width_100 nscrol position_relative"
         @scroll="scroll"
         :style="{height: $store.state.is_pc ? '100%' : $store.state.innerHeight+'px'}"
     >
@@ -97,12 +97,12 @@ export default {
             window.onmousewheel = document.onmousewheel =  (e)=>{
                 var is_to_top = scrollFunc(e)
                 var scroll_left = this.$jquery(".index_box")[0].scrollLeft;
-                e.preventDefault()
+                // e.preventDefault()
                 if (is_to_top > 0){
-                    scroll_left +=4;
+                    scroll_left += is_to_top;
                     // this.$jquery(".index_box").css('scrollLeft', 3000+"px");
                 }else{
-                    scroll_left -= 4;
+                    scroll_left += is_to_top;
                 }
                 this.$jquery(".index_box").animate({ scrollLeft: scroll_left }, 0);
 

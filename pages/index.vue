@@ -25,7 +25,9 @@ export default {
 // @import "http://at.alicdn.com/t/font_843189_zrgmiohmyin.css";
 @import "../assets/css/current_theme";
 @import "../assets/css/current_app";
-
+body{
+    overflow: hidden;
+}
 .container {
     width: 100%;
 }

@@ -43,8 +43,8 @@
                 <div class="position_relative font_size_8 width_60 line_height_27px">
                     <div class="display_flex flex_jusify_space">
                         <div class="width_100 transform_duration2 transilate-Y2 gray_1">
-                            Address：No.8, 11/F, HongHui Industrial Building, No. 29,<br>
-                            Liuhe Street, Xinpu Gang, Kowloon, Hong Kong  <br>
+                            No.8, 11th Floor, Wang Fai Industrial Building, 29,<br> 
+                            Luk Hop Street, San Po Kong, Kowloon, Hong Kong<br>
                            <a href="" style="color: skyblue">E-Mail: customer@nownetmobi.com</a>  
                         </div>
                     </div>

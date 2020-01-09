@@ -18,10 +18,12 @@
             <fourth-page ref="fourth_path" :class="{transition_back:isTransitionBack(3)}"></fourth-page>
             <fiveth-page ref="fiveth_path" :class="{transition_back: isTransitionBack(4)}"></fiveth-page>
             <products ref="products" :class="{transition_back: isTransitionBack(5)}"></products>
-            <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></secret-garden>
+            <!-- <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></secret-garden> -->
+            <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></why-choose-us>
+
             <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: isTransitionBack(7)}"></phone-soft-ware>
-            <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}"></why-choose-us>
-            <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus>
+            <!-- <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}"></why-choose-us> -->
+            <!-- <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus> -->
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
         <div class="navigation_positoin width_70 phone_none " >
@@ -117,7 +119,7 @@ export default {
                 var dom = document.querySelectorAll(".max_width_box > div")[i]
                 width += dom.offsetWidth
             }
-            this.max_width = width + 3701;
+            this.max_width = width + 1701;
             this.$nextTick(()=>{
             this.show_arr = [
                 0,
@@ -126,10 +128,11 @@ export default {
                 this.$refs.fourth_path.$el.offsetLeft,
                 this.$refs.fiveth_path.$el.offsetLeft,
                 this.$refs.products.$el.offsetLeft,
-                this.$refs.secret.$el.offsetLeft,
-                this.$refs.soft_ware.$el.offsetLeft,
+                // this.$refs.secret.$el.offsetLeft,
                 this.$refs.why_choose_us.$el.offsetLeft,
-                this.$refs.contactus.$el.offsetLeft
+
+                this.$refs.soft_ware.$el.offsetLeft,
+                // this.$refs.contactus.$el.offsetLeft
 
             ];
             this.show_arr_scroll_y = [
@@ -139,10 +142,11 @@ export default {
                 this.$refs.fourth_path.$el.offsetTop,
                 this.$refs.fiveth_path.$el.offsetTop,
                 this.$refs.products.$el.offsetTop,
-                this.$refs.secret.$el.offsetTop,
-                this.$refs.soft_ware.$el.offsetTop,
+                // this.$refs.secret.$el.offsetTop,
                 this.$refs.why_choose_us.$el.offsetTop,
-                this.$refs.contactus.$el.offsetTop
+
+                this.$refs.soft_ware.$el.offsetTop,
+                // this.$refs.contactus.$el.offsetTop
             ];
             console.log(this.show_arr)
           
@@ -166,14 +170,14 @@ export default {
                     : this.scroll_left;
             return rotate_constant
         },
-        secret_page_scroll() {
-            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[6]))/this.$store.state.innerWidth*100
-        },
+        // secret_page_scroll() {
+        //     return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[6]))/this.$store.state.innerWidth*100
+        // },
         phone_soft_page_scroll() {
             return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[7]))/this.$store.state.innerWidth*100
         },
         why_choose_page_scroll() {
-            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[8]))/this.$store.state.innerWidth*100
+            return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[6]))/this.$store.state.innerWidth*100
         },
         contact_page_scroll() {
             return (this.scroll_left + (this.$store.state.innerWidth/2) - (this.show_arr[9]))/this.$store.state.innerWidth*100
@@ -258,10 +262,9 @@ export default {
                 "Partners",
                 "Products",
                 "Ketchupbox",
-                "Secret Garden",
-                "Phone Software",
                 "Why Us",
-                "Contact Us"
+                "Phone Software",
+                // "Contact Us"
             ]
         };
     }
@@ -273,6 +276,9 @@ export default {
 @gray: gray;
 @blue:rgba(29, 24, 107, 1.0);
 .index_box {
+    .max_width_box{
+        // background:;
+    }
     .navtext_gray{
         // color: #333;
     }

@@ -49,20 +49,34 @@
                     <div class="display_flex flex_jusify_space">
                         <div class="width_100 transform_duration2 transilate-Y2">
                             <!-- <h1 class="margin_bottom_15">Digital Content</h1> -->
+                            <!-- <h1 class="margin_bottom_2">
+                               Why Choose Us
+                            </h1> -->
                             We have innovative products and professional technical teams to <br>
                             bring development and transformation to the world. Putting the<br>
                             demand of users first, we embrace the latest trend in industry and<br>
                             keep abreast with the time.
+
+                            <div class="margin_top_20">
+                                <h3 class="margin_bottom_2">
+                                    Contact Us
+                                </h3>
+                                <div>
+                                    No.8, 11th Floor, Wang Fai Industrial Building, 29,<br> 
+                                    Luk Hop Street, San Po Kong, Kowloon, Hong Kong<br>
+                                    <a href="" style="color: skyblue">E-Mail: customer@nownetmobi.com</a> 
+                                </div>
+                            </div>
                             <!-- {{secret_page_scroll()}} -->
                         </div>
                     </div>
-                    <div class="text_center transform_duration1 transilateY1 margin_top_10">
+                    <!-- <div class="text_center transform_duration1 transilateY1 margin_top_10">
                         <img
                             src="../../static/img/secret2.jpeg"
                             class="width_80 transiform_y_100px"
                             alt
                         />
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="height_100 overflow_hidden phone_margin_top_60px fourth_page display_inline_block"
+        class="height_100 margin_left_200px overflow_hidden phone_margin_top_60px fourth_page display_inline_block"
         ref="fourth_path"
         :style="{
       width: $store.state.innerWidth + 'px',
@@ -11,7 +11,7 @@
             class="width_90 height_100 phone_width_90 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
         >
             <div class="flex_1">
-                <h1 class="page_h1 transform_duration1 transilateX2">Introduction</h1>
+                <h1 class="page_h1 transform_duration1 margin_bottom_3 transilateX2">Introduction</h1>
                 <div
                     class="transform_duration1 transilateX3 font_size_8 gray_1 transform_duration1 phone transilate-Y2 phone_transilateX2"
                 >
@@ -20,7 +20,7 @@
                     is our first priority.
                 </div>
             </div>
-            <div class="flex_1 phone_flex phone_margin_top_20px transform_duration1 transilateX2">
+            <div class="flex_1 margin_left_38 phone_flex phone_margin_top_20px transform_duration1 transilateX2">
                 <div class="phone_flex_1">
                     <img
                         src="../../static/img/prod.png"
@@ -28,8 +28,9 @@
                         style="width:25px;"
                         alt
                     />
-                    COUNTRIES
-                    <div class="orange font_size_60 font_weight_800 phone_font_size_30px">50+</div>
+                    <span class="font_size_15 padding_left_1">COUNTRIES</span>
+                    
+                    <div class="orange margin_top_20 font_size_60 font_weight_800 phone_font_size_30px">50+</div>
                 </div>
                 <div class="margin_top_72px phone_flex_1 phone_margin_top_0">
                     <img
@@ -38,8 +39,9 @@
                         style="width:25px;"
                         alt
                     />
-                    USERS
-                    <div class="orange font_size_60 font_weight_800 phone_font_size_30px">200,000+</div>
+                    
+                    <span class="font_size_15 padding_left_1">USERS</span>
+                    <div class="orange font_size_60 margin_top_20 font_weight_800 phone_font_size_30px">200,000+</div>
                 </div>
             </div>
             <div class="flex_2 transform_duration1 transilateY1">
@@ -83,7 +85,7 @@ export default {
     }
     .page_h1 {
         background-color: #77787c;
-        background: url("../../static/img/ice.jpeg") no-repeat;
+        background: url("../../static/img/city.png") no-repeat;
         background-size: 900px auto;
         font-size: 42px;
         // line-height: 72px;

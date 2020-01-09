@@ -1,5 +1,5 @@
 <template>
-    <div class="height_100 sebox display_inline_block overflow_hidden">
+    <div class="height_100 sebox display_inline_block overflow_hidden margin_left_500px">
         <div
             class="display_inline_block left_squre height_100 position_relative phone_none"
             style="width: 900px"

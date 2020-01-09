@@ -1,5 +1,6 @@
 body {
-  font-family: 'Arial', Calibri, 'Trebuchet MS', sans-serif, 'Gill Sans'
+  font-family: 'Arial', Calibri, 'Trebuchet MS', sans-serif, 'Gill Sans';
+  background: rgba(255, 255, 255, 1.0);
 }
 
 .indent20{
@@ -9,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .img_blue{
   background: rgba(3, 81, 87, 1.0);
 }
@@ -724,6 +726,12 @@ html {
 }
 
 @media screen and (min-width: 800px) {
+  .margin_left_500px{
+    margin-left: -500px;
+  }
+  .margin_left_200px{
+    margin-left: -200px;
+  }
   .pc_flex {
     width: 94%;
     margin: 20px auto 0;
@@ -856,8 +864,12 @@ html {
 {
   transform: translate(0px);
 }
-
-
+.width_23{
+  width: 23%;
+}
+.margin_top_50px{
+  margin-top: 50px;
+}
 .overflow_y_hidden{
   overflow-y: hidden;
 }
@@ -993,6 +1005,9 @@ html {
 
 /* 小于800 的尺寸 */
 @media screen and (max-width:800px) {
+  .margin_left_500px{
+    margin-left: 0;
+  }
   .phone_font_size_30px{
     font-size: 30px;
   }

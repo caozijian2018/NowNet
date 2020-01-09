@@ -27,21 +27,10 @@
                         
                         <!-- <div class="button_app display_inline_block align_self_start"></div> -->
                     </div>
-                    <div class="width_50 font_size_8 line_height_27px">
-                        <div class="display_flex margin_top_72px flex_jusify_space">
-                            <div class="flex_1 scalse2 overflow_hidden position_relative third_page_back" style="font-size:0;">
-                                <img
-                                    src="../../static/img/ice.jpeg"
-                                    class="height_100 full_div"
-                                    alt
-                                    :style="{transform: 'translateX('+ -(thirdLeftPagePosition + 200)+'px)' }"
-                                />
-                                <img
-                                    src="../../static/img/n.png"
-                                    style="box-sizing:border-box;vertical-align:left;display:block"
-                                    class="width_100 position_relative vertical_middle z_index100"
-                                />
-                            </div>
+                    <div class="width_50 font_size_8 display_flex flex_align_center">
+                        <div class="display_flex flex_align_center width_100 flex_jusify_space">
+                            <img src="../../static/img/n.jpg" class="width_100 scalse2" alt="">
+
                         </div>
                     </div>
                 </div>

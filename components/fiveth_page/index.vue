@@ -16,9 +16,9 @@
                         <img src="../../static/img/newimg/3.jpg" class="width_45" alt />
                         <img src="../../static/img/newimg/4.jpg" class="width_45" alt />
                     </div>
-                    <div class="phone_margin_top_20px">
+                    <div class="phone_margin_top_20px margin_top_50px">
                         <h1 class="font_size_30 margin_bottom_15 transform_duration1 transilate-Y2">Exclusive content</h1>
-                        <div class="margin_top_20 font_size_8 line_height_25px transform_duration1 transilateY2">
+                        <div class=" font_size_8 line_height_25px transform_duration1 transilateY2">
                             With our professional content team, we are able to provide premium
                             subscription services to global mobile users. We have exclusive and
                             attractive content and it is of various kinds, catering to the need
@@ -33,27 +33,27 @@
                             We work with the best of the best. We guarantee the exceptional quality of our services. 
                         </div>
                     </div>
-                    <div class="phone_flex_1 text_center ">
+                    <div class="phone_flex_1 margin_top_20 display_flex flex_jusify_space wrop text_center ">
                         <img
                             src="../../static/img/newimg/logo1.png"
-                            class="width_100px transform_duration1 transilateX1"
+                            class="width_40 transform_duration1 transilateX1"
                             alt
                         />
                         <img
                             src="../../static/img/newimg/logo2.png"
-                            class="width_100px transform_duration1 transilateX2"
+                            class="width_40 transform_duration1 transilateX2"
                             alt
                         />
                         <div class="">
                         </div>
                         <img
                             src="../../static/img/newimg/logo3.png"
-                            class="width_100px transform_duration1 transilateX3"
+                            class="width_40 transform_duration1 transilateX3"
                             alt
                         />
                         <img
                             src="../../static/img/newimg/logo4.png"
-                            class="width_100px transform_duration1 transilateX4"
+                            class="width_40 transform_duration1 transilateX4"
                             alt
                         />
                     </div>
@@ -94,7 +94,7 @@ export default {
 @import "../../assets/css/current_theme";
 .fiveth_box {
     .width_100px {
-        width: 130px;
+        width: 150px;
     }
     background: @blue;
     .fourth_page_h1 {

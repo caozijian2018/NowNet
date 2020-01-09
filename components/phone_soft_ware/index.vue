@@ -190,7 +190,7 @@ export default {
         background: @app_gray;
     }
     .secret_box {
-        background: rgba(248, 248, 249, 1.0);
+        background: #fff;
         .fourth_page_h1 {
             background-color: #77787c;
             background: url("../../static/img/mountains.jpeg") no-repeat;

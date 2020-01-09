@@ -24,9 +24,8 @@
                 /> -->
                 <div :style="{transform: transfromStyle}"  class="background_image  width_100">
                     <img
-                        src="../../static/img/logo1.png"
+                        src="../../static/img/logo-svg.jpg"
                         class="width_100"
-                         
                         alt
                     />
                 </div>
@@ -49,10 +48,10 @@ export default {
         transform: translateX(80%);
     }
     .background_image {
-        background: url("../../static/img/ice.jpeg");
-        background-position: 10% 50%;
-        background-repeat: no-repeat;
-        background-size: 100%;
+        // background: url("../../static/img/ice.jpeg");
+        // background-position: 10% 50%;
+        // background-repeat: no-repeat;
+        // background-size: 200%;
     }
 }
 </style>

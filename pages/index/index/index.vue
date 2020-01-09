@@ -24,7 +24,7 @@
             <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus>
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
-        <div class="navigation_positoin width_50 phone_none " >
+        <div class="navigation_positoin width_70 phone_none " >
             <div class="display_flex flex_jusify_space">
                 <div
                     v-for="(item,index) in navigation_arr"
@@ -37,7 +37,7 @@
                         :class="{rubberBand: isScrolledThisItem(index), already_rolled: isScrolledThisItem(index)}"
                     ></div>
                     <div
-                        class="transition4 text gray_1"
+                        class="transition4 text navtext_gray"
                         @click="scrollPage(index)"
                         :class="{orange_text: isScrolledThisItem(index)}"
                     >{{item}}</div>
@@ -186,12 +186,7 @@ export default {
             })
         },
         scrollPage(i) {
-            console.log(i)
             var distance = this.show_arr[i]
-            console.log(9999)
-            console.log(distance)
-
-            // var duration_time = Math.abs(i - this.preindex)*300
             this.$jquery(".index_box").animate({ scrollLeft: distance }, 1000);
             this.preindex = i;
         },
@@ -278,6 +273,9 @@ export default {
 @gray: gray;
 @blue:rgba(29, 24, 107, 1.0);
 .index_box {
+    .navtext_gray{
+        // color: #333;
+    }
     .button_app{
         padding: 20px;
         color: #fff;
@@ -311,12 +309,12 @@ export default {
                     border-radius: 50%;
                 }
             }
-            border-bottom: 1px solid @gray;
+            border-bottom: 1px solid #d3d3d3;
             &.border_bottom_transparent {
                 border-bottom: 1px solid transparent;
             }
             .text {
-                color: #ddd;
+                color: rgb(135,135,135);
             }
             .orange_text {
                 color: @orange;
@@ -324,7 +322,7 @@ export default {
         }
         position: fixed;
         left: 50%;
-        bottom: 30px;
+        bottom: 55px;
         z-index: 1002;
         transition: 0.4s;
         transform: translateX(-50%);

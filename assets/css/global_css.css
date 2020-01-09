@@ -1,5 +1,5 @@
 body {
-  font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Gill Sans'
+  font-family: 'Arial', Calibri, 'Trebuchet MS', sans-serif, 'Gill Sans'
 }
 
 .indent20{
@@ -11,6 +11,10 @@ body {
 }
 .img_blue{
   background: rgba(3, 81, 87, 1.0);
+}
+.scalse2{
+  transform-origin: 14% center;
+  transform: scale(1.5);
 }
 .green{
   color: rgba(4, 181, 169, 1.0)

@@ -12,9 +12,11 @@
             <div class="position_relative font_size_8 gray_1 phone_width_90 phone_margin line_height_27px">
                 <div class="display_flex flex_jusify_space transform_duration1 transilate-Y2 phone_block">
                     <div class="width_40 phone_width_90 phone_margin">
-                        Technology first, user first. 
-                        Develop good products.
-                        To be a world leading company.
+                          To be one of the world’s leading 
+                        content provider and application developer,
+                        using the intelligence of the all staff
+                        to help bring change to people’s life and reflect
+                        the value of our company.
                     </div>
                     <div class="width_50 phone_width_90 phone_margin z_index100 transform_duration1 transilate-Y3">
                         <img src="../../static/img/mac.png" class="width_60" alt />
@@ -42,12 +44,12 @@ export default {};
       }
         .second_page_h1 {
             background-color: #77787c;
-            background: url("../../static/img/office.jpeg") no-repeat;
+            background: url("../../static/img/city.png") no-repeat;
             background-size: 900px auto;
             font-size: 88px;
             // line-height: 72px;
             -webkit-background-clip: text;
-            background-position: 100% center;
+            background-position: 20% center;
             -webkit-text-fill-color: transparent;
             will-change: background-position;
             // color: #77787c;

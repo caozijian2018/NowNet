@@ -16,8 +16,15 @@
                         class="back_blue rotate_triangle height_100 width_30"
                     >
                     </div>
-                    <div class="width_30 display_flex flex_align_center" style="transform: translateX(-250px)">
-                        <h1 class="font_size_50 margin_bottom_15 font_size_100 z_index100">Works</h1>
+                    <div class="width_50 display_flex flex_column flex_align_center flex_center" style="transform: translateX(-250px)">
+                        <h1 class="font_size_50 margin_bottom_15 font_size_100 z_index100 margin_bottom_2">Works
+                            <div class="font_size_20">
+                                Nownetmobi’s core concern is the works that we offer to users.
+                                Our works shape our identity. Through our works we can
+                                touch users in a variety of ways… 
+                            </div>
+                        </h1>
+                        
                         <!-- <div class="button_app display_inline_block align_self_start"></div> -->
                     </div>
                     <div class="width_50 font_size_8 line_height_27px">

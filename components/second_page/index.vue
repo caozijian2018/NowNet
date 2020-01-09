@@ -7,10 +7,12 @@
             class="width_80 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
         >
             <div class="width_30 phone_width_90 phone_margin phone_center_text">
-                <h1 class="font_size_50 margin_bottom_15 second_page_h1">Our Mission</h1>
+                <h1 class="font_size_50 margin_bottom_15 second_page_h1">Our Mission
+                    
+                </h1>
             </div>
             <div class="position_relative font_size_8 gray_1 phone_width_90 phone_margin line_height_27px">
-                <div class="display_flex flex_jusify_space transform_duration1 transilate-Y2 phone_block">
+                <div class="display_flex flex_jusify_space transform_duration1 flex_align_center transilate-Y2 phone_block">
                     <div class="width_40 phone_width_90 phone_margin">
                           To be one of the world’s leading 
                         content provider and application developer,
@@ -40,7 +42,7 @@ export default {};
 <style lang='less'>
   .second_page {
       .margin_top_300px{
-          margin-top: -100px;
+          margin-top: -50px;
       }
         .second_page_h1 {
             background-color: #77787c;

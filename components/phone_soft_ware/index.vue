@@ -20,7 +20,7 @@
                     >Phone Software</h1>
                 </div>
                 <div
-                    class="height_100 flex_1 gray_back overflow_hidden display_flex flex_align_center"
+                    class="height_100 flex_1 back_white overflow_hidden display_flex flex_align_center"
                 >
                     <h1
                         :style="{ transform: orange_color_text_transform() }"
@@ -164,7 +164,7 @@ export default {
         }
     }
     .left_squre {
-        background: @app_gray;
+        background:white;
     }
     .top_text_left {
         transform-origin: right top;

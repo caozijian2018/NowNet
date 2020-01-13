@@ -261,9 +261,9 @@ export default {
                 "About Us",
                 "Partners",
                 "Products",
-                "Ketchupbox",
-                "Why Us",
+                // "Ketchupbox",
                 "Phone Software",
+                "Why Us",
                 // "Contact Us"
             ]
         };

@@ -17,7 +17,7 @@
                     <h1
                         :style="{ transform: white_color_text_transform() }"
                         class="top_text_left font_size_40 font_weight_800 text_center width_100 white"
-                    >Phone Software</h1>
+                    >Why Choose Us?</h1>
                 </div>
                 <div
                     class="height_100 flex_1 back_white overflow_hidden display_flex flex_align_center"
@@ -25,7 +25,7 @@
                     <h1
                         :style="{ transform: orange_color_text_transform() }"
                         class="top_text_right font_size_40 font_weight_800 text_center width_100 orange"
-                    >Phone Software</h1>
+                    >Why Choose Us?</h1>
                 </div>
             </div>
         </div>
@@ -37,7 +37,25 @@
             <div
                 class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
             >
-                <div class="width_30 phone_width_90 phone_margin">
+                <div class="display_flex flex_jusify_space gray_1">
+                        <div class="width_100 transform_duration2 font_size_20 line_height_27px transilate-Y2">
+                            We have innovative products and professional technical teams to <br>
+                            bring development and transformation to the world. Putting the<br>
+                            demand of users first, we embrace the latest trend in industry and<br>
+                            keep abreast with the time.
+                            <div class="margin_top_20">
+                                <h3 class="margin_bottom_2">
+                                    Contact Us
+                                </h3>
+                                <div>
+                                    No.8, 11th Floor, Wang Fai Industrial Building, 29,<br> 
+                                    Luk Hop Street, San Po Kong, Kowloon, Hong Kong<br>
+                                    <a href="" style="color: skyblue">E-Mail: customer@nownetmobi.com</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- <div class="width_30 phone_width_90 phone_margin">
                     <h1
                         class="phone_block font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateY3"
                     >Phone Software</h1>
@@ -46,8 +64,8 @@
                         Our target is to make our applications available and useful for all
                         netizens.
                     </div>
-                </div>
-                <div
+                </div> -->
+                <!-- <div
                     class="position_relative font_size_8 width_65 phone_width_90 phone_margin wrop display_flex flex_jusify_space phone_block line_height_27px"
                 >
 
@@ -62,23 +80,7 @@
                             {{item.desc}} 
                         </div>
                     </div>
-                    <!-- <div class="display_flex flex_jusify_space">
-                        <div class="width_100 transform_duration2 transilate-Y2 gray_1">
-                            We have designed and developed a data recovery app, a data
-                            transfer app and a phone managing app. With our apps, users can
-                            recover their lost data with simple clicks, transfer their mobile
-                            data freely though different devices, manage their phone memory
-                            and clear virus.
-                        </div>
-                    </div>
-                    <div class="text_center transform_duration1 transilateY1 margin_top_10">
-                        <img
-                            src="../../static/img/clear.png"
-                            class="width_20 phone_width_100 transiform_y_100px"
-                            alt
-                        />
-                    </div> -->
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

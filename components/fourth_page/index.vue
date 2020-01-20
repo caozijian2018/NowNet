@@ -41,7 +41,7 @@
                     />
                     
                     <span class="font_size_15 padding_left_1">USERS</span>
-                    <div class="orange font_size_60 margin_top_20 font_weight_800 phone_font_size_30px">200,000+</div>
+                    <div class="orange font_size_60 margin_top_20 font_weight_800 phone_font_size_30px">800,000+</div>
                 </div>
             </div>
             <div class="flex_2 transform_duration1 transilateY1">

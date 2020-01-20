@@ -38,7 +38,7 @@
                 <img src="../../static/img/com.png" class="width_100" alt="">
             </div>
             <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
-                MyH5Game is a premium subscription service portal focused on high-quality HTML 5 game. The portal currently consists of 60 games with different categories, including adventure, strategy, puzzle, shooting, racing, fighting and others. Users will have excellent experience in MyH5Game. 
+                MyH5Game is a premium subscription service focused on high-quality HTML 5 game, which currently consists of 60 games with different categories, including adventure, strategy, shooting, and others. Users will have excellent experience in MyH5Game. 
             </div>
         </div>
     </div>

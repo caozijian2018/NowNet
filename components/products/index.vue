@@ -15,31 +15,36 @@
         <h1 class="display_inline_block phone_show margin_top_20 width_90 margin_auto margin_bottom_2 fourth_page_h1 ">
             Products
         </h1>
-        <div class="display_flex height_100 phone_block  flex_jusify_space flex_align_center width_90 margin_auto">
-            <div class="width_23 phone_width_90 margin_bottom_2">
-                <img class="width_100" src="../../static/img/funny.jpeg" alt="">
+        <div class="display_flex height_100 flex_column phone_block flex_center flex_align_center width_90 margin_auto">
+            <div class="display_flex width_100 phone_block flex_jusify_space flex_align_center">
+                <div class="width_23 phone_width_90 margin_bottom_2">
+                    <img class="width_100" src="../../static/img/funny.jpeg" alt="">
+                </div>
+                <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
+                    Ketchupbox is a premium subscription service. The service consists
+                            of multiple categories of funny content, including videos, pictures,
+                            wallpapers and ringtones. Our service is enjoyed by over 20,000
+                            users globally.
+                </div>
+                <div class="width_23 phone_width_90 margin_bottom_2">
+                    <img class="width_100" src="../../static/img/secret.jpeg" alt="">
+                </div>
+                <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
+                    Secret Garden provides high-quality pleasing beauty videos and
+                                pictures to subscribers. The service consists of various kinds of
+                                beautiful girls. Users can browse the content online and the
+                                content is updated regularly.
+                </div>
             </div>
-            <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
-                Ketchupbox is a premium subscription service. The service consists
-                        of multiple categories of funny content, including videos, pictures,
-                        wallpapers and ringtones. Our service is enjoyed by over 20,000
-                        users globally.
+            <div class="display_flex phone_block flex_align_center flex_center">
+                <div class="width_23 phone_width_90 margin_bottom_2">
+                    <img src="../../static/img/com.png" class="width_100" alt="">
+                </div>
+                <div class="width_23 phone_width_90 gray_1 margin_left_20 phone_margin_left_0 font_size_15 line_height_25px margin_bottom_2">
+                    MyH5Game is a premium subscription service focused on high-quality HTML 5 game, which currently consists of 60 games with different categories, including adventure, strategy, shooting, and others. Users will have excellent experience in MyH5Game. 
+                </div>
             </div>
-            <div class="width_23 phone_width_90 margin_bottom_2">
-                <img class="width_100" src="../../static/img/secret.jpeg" alt="">
-            </div>
-            <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
-                Secret Garden provides high-quality pleasing beauty videos and
-                            pictures to subscribers. The service consists of various kinds of
-                            beautiful girls. Users can browse the content online and the
-                            content is updated regularly.
-            </div>
-            <div class="width_23 phone_width_90 margin_bottom_2">
-                <img src="../../static/img/com.png" class="width_100" alt="">
-            </div>
-            <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
-                MyH5Game is a premium subscription service focused on high-quality HTML 5 game, which currently consists of 60 games with different categories, including adventure, strategy, shooting, and others. Users will have excellent experience in MyH5Game. 
-            </div>
+
         </div>
     </div>
 </template>
@@ -53,7 +58,7 @@ export default {
 @import "../../assets/css/current_theme";
 .products {
     .width_23{
-        width: 16%;
+        // width: 16%;
     }
     @media screen and (max-width:800px){
         .phone_positoin{

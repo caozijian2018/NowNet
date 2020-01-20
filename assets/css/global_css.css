@@ -1078,4 +1078,7 @@ html {
   .media_height_300 {
     height: 300px;
   }
+  .phone_margin_left_0{
+    margin-left: 0;
+  }
 }

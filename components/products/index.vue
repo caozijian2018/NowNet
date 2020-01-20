@@ -34,34 +34,13 @@
                             beautiful girls. Users can browse the content online and the
                             content is updated regularly.
             </div>
+            <div class="width_23 phone_width_90 margin_bottom_2">
+                <img src="../../static/img/com.png" class="width_100" alt="">
+            </div>
+            <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
+                MyH5Game is a premium subscription service portal focused on high-quality HTML 5 game. The portal currently consists of 60 games with different categories, including adventure, strategy, puzzle, shooting, racing, fighting and others. Users will have excellent experience in MyH5Game. 
+            </div>
         </div>
-        <!-- <div
-            class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
-        >
-            <div class="width_30 phone_width_90 phone_margin">
-                <h1
-                    class="font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 phone phone_transilate_X2"
-                >Ketchupbox</h1>
-            </div>
-            <div
-                class="position_relative font_size_8 width_60 phone_margin phone_width_90 line_height_27px"
-            >
-                <div class="display_flex flex_jusify_space">
-                    <div
-                        class="width_100 gray_1 transform_duration1 phone transilate-Y2 phone_transilateX2"
-                    >
-                        
-                        Ketchupbox is a premium subscription service. The service consists
-                        of multiple categories of funny content, including videos, pictures,
-                        wallpapers and ringtones. Our service is enjoyed by over 20,000
-                        users globally.
-                    </div>
-                </div>
-                <div class="text_center transform_duration1 transilateY1 margin_top_10">
-                    <img src="../../static/img/funny.jpeg" class="width_80 transiform_y_100px" alt />
-                </div>
-            </div>
-        </div> -->
     </div>
 </template>
 
@@ -73,6 +52,9 @@ export default {
 <style lang="less">
 @import "../../assets/css/current_theme";
 .products {
+    .width_23{
+        width: 16%;
+    }
     @media screen and (max-width:800px){
         .phone_positoin{
             position: relative;

@@ -41,13 +41,12 @@
                     <div
                         class="transition4 text navtext_gray"
                         @click="scrollPage(index)"
-                        :class="{orange_text: isScrolledThisItem(index)}"
+                        :class="{orange_text: isScrolledThisItem(index) || selected_index == index}"
                     >{{item}}</div>
                 </div>
             </div>
             <div
                 class="bottom_orange_border position_absolute"
-                :style="{width: scroll_left*100/($store.state.innerWidth*navigation_arr.length + 3000)+'%'}"
             ></div>
         </div>
     </div>
@@ -190,6 +189,7 @@ export default {
             })
         },
         scrollPage(i) {
+            this.selected_index = i;
             var distance = this.show_arr[i]
             this.$jquery(".index_box").animate({ scrollLeft: distance }, 1000);
             this.preindex = i;
@@ -242,6 +242,7 @@ export default {
     },
     data() {
         return {
+            selected_index: 0,
             most_scroll_y: 0,
             secret_position_x: 0,
             show_arr:[],

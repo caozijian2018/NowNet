@@ -20,7 +20,6 @@
             <products ref="products" :class="{transition_back: isTransitionBack(5)}"></products>
             <!-- <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></secret-garden> -->
             <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></why-choose-us>
-
             <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: isTransitionBack(7)}"></phone-soft-ware>
             <!-- <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}"></why-choose-us> -->
             <!-- <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus> -->
@@ -128,12 +127,15 @@ export default {
                 this.$refs.fiveth_path.$el.offsetLeft,
                 this.$refs.products.$el.offsetLeft,
                 // this.$refs.secret.$el.offsetLeft,
-                this.$refs.why_choose_us.$el.offsetLeft,
+                this.$refs.why_choose_us.$el.offsetLeft + 600,
 
-                this.$refs.soft_ware.$el.offsetLeft,
+                this.$refs.soft_ware.$el.offsetLeft ,
                 // this.$refs.contactus.$el.offsetLeft
 
             ];
+            console.log(999)
+            console.log(this.show_arr)
+            console.log(this.$refs.soft_ware.$el.offsetLeft)
             this.show_arr_scroll_y = [
                 0,
                 this.$refs.slogon.$el.offsetTop,
@@ -191,6 +193,10 @@ export default {
         scrollPage(i) {
             this.selected_index = i;
             var distance = this.show_arr[i]
+            console.log(888)
+            console.log(i)
+            console.log(this.show_arr)
+
             this.$jquery(".index_box").animate({ scrollLeft: distance }, 1000);
             this.preindex = i;
         },
@@ -259,10 +265,11 @@ export default {
             navigation_arr: [
                 "Home",
                 "Mission",
-                "About Us",
+                "Works",
+                "Introduction",
                 "Partners",
-                "Products",
                 // "Ketchupbox",
+                "Products",
                 "Phone Software",
                 "Why Us",
 

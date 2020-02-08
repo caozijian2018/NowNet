@@ -3,7 +3,7 @@
         class="height_100 phone_soft_box display_inline_block overflow_hidden"
         :style="{ height: $store.state.is_pc ? 'height_100' : 'auto' }"
     >
-        <div
+        <!-- <div
             class="display_inline_block left_squre height_100 position_relative phone_none"
             style="width: 900px"
         >
@@ -28,59 +28,49 @@
                     >Why Choose Us?</h1>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div
             class="height_100 overflow_hidden secret_box white display_inline_block"
             ref="fourth_path"
             :style="{ width: $store.state.innerWidth + 'px' }"
         >
             <div
-                class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_jusify_space display_flex phone_block"
+                class="width_70 phone_width_90 height_100 margin_auto flex_align_center flex_center display_flex phone_block"
             >
-                <div class="display_flex flex_jusify_space gray_1">
-                        <div class="width_100 transform_duration2 font_size_20 line_height_27px transilate-Y2">
+                <div class="display_flex  z_index100 flex_jusify_space gray_1">
+                        <div class="width_100 text_center transform_duration2 font_size_20 line_height_27px transilate-Y2">
                             We have innovative products and professional technical teams to <br>
                             bring development and transformation to the world. Putting the<br>
                             demand of users first, we embrace the latest trend in industry and<br>
                             keep abreast with the time.
-                            <div class="margin_top_20">
+                            <div class="margin_top_50px">
                                 <h3 class="margin_bottom_2">
                                     Contact Us
                                 </h3>
-                                <div>
-                                    No.8, 11th Floor, Wang Fai Industrial Building, 29,<br> 
-                                    Luk Hop Street, San Po Kong, Kowloon, Hong Kong<br>
-                                    <a href="" style="color: skyblue">E-Mail: customer@nownetmobi.com</a> 
+                                <div class="display_flex phone_block flex_jusify_space width_70 margin_auto">
+                                    <div class="text_center width_30 phone_width_90">
+                                        <img src="../../static/img/location.png" style="width: 50px" alt="">
+                                        <div>
+                                            No.8, 11th Floor, Wang Fai Industrial Building, 29,
+                                            Luk Hop Street, San Po Kong, Kowloon, Hong Kong
+                                        </div>
+                                    </div>
+                                    <div class="text_center width_30 phone_width_90">
+                                        <img src="../../static/img/xinjian.png" style="width: 50px" alt="">
+                                        <div>
+                                            customer@nownetmobi.com
+                                        </div>
+                                    </div>
+                                    <!-- <div class="text_center width_30">
+                                        <img src="../../static/img/dianhua.png" style="width: 50px" alt="">
+                                        <div>
+                                            customer@nownetmobi.com
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                <!-- <div class="width_30 phone_width_90 phone_margin">
-                    <h1
-                        class="phone_block font_size_50 margin_bottom_15 fourth_page_h1 transform_duration1 transilateY3"
-                    >Phone Software</h1>
-                    <div class="font_size_8 line_height_25px gray_1">
-                        We have a tech team that is devoted to mobile phone applications.
-                        Our target is to make our applications available and useful for all
-                        netizens.
-                    </div>
-                </div> -->
-                <!-- <div
-                    class="position_relative font_size_8 width_65 phone_width_90 phone_margin wrop display_flex flex_jusify_space phone_block line_height_27px"
-                >
-
-                    <div class="box_soft_desc width_48 box_szing phone_width_100 margin_top_20" v-for="(item) in arr"   :key="item.title">
-                        <div class="green margin_bottom_15">
-                            <img :src="item.img_src" class="vertical_middle" style="width:30px;" alt="">
-                            <span class="font_size_20">
-                                {{item.title}}
-                            </span>
-                        </div>
-                        <div style="font-size: 14px">
-                            {{item.desc}} 
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -157,6 +147,11 @@ export default {
 <style lang="less">
 @import "../../assets/css/current_theme";
 .phone_soft_box {
+    @media screen and (min-width: 1200px){
+        .pc_transform{
+            transform: translateX(-500px);
+        }
+    }
     .box_soft_desc{
         padding: 20px;
         border: 1px solid #999999;
@@ -167,6 +162,7 @@ export default {
     }
     .left_squre {
         background:white;
+        // z-index: 10000;
     }
     .top_text_left {
         transform-origin: right top;

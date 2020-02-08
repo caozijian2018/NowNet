@@ -21,7 +21,7 @@
                     <img class="width_100" src="../../static/img/funny.jpeg" alt="">
                 </div>
                 <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
-                    Ketchupbox is a premium subscription service. The service consists
+                    <a href="http://ketchupbox.com/ ">Ketchupbox</a>  is a premium subscription service. The service consists
                             of multiple categories of funny content, including videos, pictures,
                             wallpapers and ringtones. Our service is enjoyed by over 20,000
                             users globally.
@@ -30,7 +30,7 @@
                     <img class="width_100" src="../../static/img/secret.jpeg" alt="">
                 </div>
                 <div class="width_23 phone_width_90 gray_1 font_size_15 line_height_25px margin_bottom_2">
-                    Secret Garden provides high-quality pleasing beauty videos and
+                    <a href="http://secretsgarden.net/">Secret Garden</a> provides high-quality pleasing beauty videos and
                                 pictures to subscribers. The service consists of various kinds of
                                 beautiful girls. Users can browse the content online and the
                                 content is updated regularly.
@@ -41,7 +41,7 @@
                     <img src="../../static/img/com.png" class="width_100" alt="">
                 </div>
                 <div class="width_23 phone_width_90 gray_1 margin_left_20 phone_margin_left_0 font_size_15 line_height_25px margin_bottom_2">
-                    MyH5Game is a premium subscription service focused on high-quality HTML 5 game, which currently consists of 60 games with different categories, including adventure, strategy, shooting, and others. Users will have excellent experience in MyH5Game. 
+                    <a href="https://myh5game.net">MyH5Game</a> is a premium subscription service focused on high-quality HTML 5 game, which currently consists of 60 games with different categories, including adventure, strategy, shooting, and others. Users will have excellent experience in MyH5Game. 
                 </div>
             </div>
 
@@ -57,6 +57,10 @@ export default {
 <style lang="less">
 @import "../../assets/css/current_theme";
 .products {
+    a{
+        color: orangered;
+        cursor: pointer;
+    }
     .width_23{
         // width: 16%;
     }

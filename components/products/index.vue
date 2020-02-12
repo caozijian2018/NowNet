@@ -22,24 +22,18 @@
                 <div class="width_30 phone_width_100" @click="jump(0)">
                     <img src="../../static/img/funny.jpeg" alt class="width_100" />
                     <div class="font_size_15 line_height_25px">
-                        Ketchupbox is a premium subscription service. The service consists
-                        of multiple categories of funny content, including videos, pictures,
-                        wallpapers and ringtones. Our service is enjoyed by over 20,000
-                        users globally.
+                        Ketchupbox
                     </div>
                 </div>
                 <div class="width_30 phone_width_100" @click="jump(2)">
                     <img src="../../static/img/secret.jpeg" alt class="width_100" />
                     <div class="font_size_15 line_height_25px">
-                        Secret Garden provides high-quality pleasing beauty videos and
-                        pictures to subscribers. The service consists of various kinds of
-                        beautiful girls. Users can browse the content online and the
-                        content is updated regularly.
+                        Secret Garden
                     </div>
                 </div>
                 <div class="width_30 phone_width_100" @click="jump(1)">
                     <img src="../../static/img/com.png" alt class="width_100" />
-                    <div class="font_size_15 line_height_25px">MyH5Game is a premium subscription service focused on high-quality HTML 5 game, which currently consists of 60 games with different categories, including adventure, strategy, shooting, and others. Users will have excellent experience in MyH5Game.</div>
+                    <div class="font_size_15 line_height_25px">MyH5Game</div>
                 </div>
             </div>
         </div>

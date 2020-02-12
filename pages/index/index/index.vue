@@ -25,7 +25,7 @@
             <!-- <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus> -->
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
-        <div class="navigation_positoin width_70 phone_none " >
+        <div class="navigation_positoin width_70 phone_none cursor" >
             <div class="display_flex flex_jusify_space">
                 <div
                     v-for="(item,index) in navigation_arr"

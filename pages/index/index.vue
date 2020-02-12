@@ -42,10 +42,8 @@ export default {
             window.onresize = this.setHeightAndISPc;
         },
         setHeightAndISPc() {
-            // this.height_ = innerHeight;
-            // this.$store.state.innerHeight = this.height_;
             this.pc_phone();
-
+            this.$store.state.innerHeight = innerHeight;
         }
     }
 };

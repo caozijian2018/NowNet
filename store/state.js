@@ -6,6 +6,6 @@ export default {
   search_word:"",
   innerHeight: 0,
   innerWidth: 0,
-
+  scroll: 0,
   is_pc: true,
 }

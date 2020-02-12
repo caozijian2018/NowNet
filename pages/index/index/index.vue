@@ -89,6 +89,8 @@ export default {
             this.inner_height = this.$store.state.innerHeight / 2;
             this.sortModuleOffset();
             this.whatchScroll();
+            this.$jquery(".index_box").animate({ scrollLeft: this.$store.state.scroll}, 1000);
+            debugger
         });
     },
     methods: {
@@ -126,16 +128,9 @@ export default {
                 this.$refs.fourth_path.$el.offsetLeft,
                 this.$refs.fiveth_path.$el.offsetLeft,
                 this.$refs.products.$el.offsetLeft,
-                // this.$refs.secret.$el.offsetLeft,
                 this.$refs.why_choose_us.$el.offsetLeft + 600,
-
                 this.$refs.soft_ware.$el.offsetLeft ,
-                // this.$refs.contactus.$el.offsetLeft
-
             ];
-            console.log(999)
-            console.log(this.show_arr)
-            console.log(this.$refs.soft_ware.$el.offsetLeft)
             this.show_arr_scroll_y = [
                 0,
                 this.$refs.slogon.$el.offsetTop,
@@ -143,15 +138,9 @@ export default {
                 this.$refs.fourth_path.$el.offsetTop,
                 this.$refs.fiveth_path.$el.offsetTop,
                 this.$refs.products.$el.offsetTop,
-                // this.$refs.secret.$el.offsetTop,
                 this.$refs.why_choose_us.$el.offsetTop,
-
                 this.$refs.soft_ware.$el.offsetTop,
-                // this.$refs.contactus.$el.offsetTop
             ];
-            console.log(this.show_arr)
-          
-
             })
         },
         first_page_transform_style() {
@@ -196,8 +185,8 @@ export default {
             console.log(888)
             console.log(i)
             console.log(this.show_arr)
-
             this.$jquery(".index_box").animate({ scrollLeft: distance }, 1000);
+            this.$store.state.scroll = distance;
             this.preindex = i;
         },
         isScrolledThisItem(i) {
@@ -216,6 +205,7 @@ export default {
             if(scroll_top > this.most_scroll_y){
                 this.most_scroll_y = scroll_top;
             }
+            this.$store.state.scroll = scrollLeft;
             var deg =
                 (scroll_left > this.$store.state.innerWidth
                     ? this.$store.state.innerWidth * 0.7
@@ -223,6 +213,7 @@ export default {
         },
         scrollY(v){
             var scroll_top = v.target.scrollTop;
+            debugger
             this.scroll_top = scroll_top;
             console.log(scroll_top)
             bus.$emit("scrollY", scroll_top);
@@ -241,7 +232,7 @@ export default {
         setHeightAndPhoneOrPc() {
             var height_ = innerHeight;
             var width_ = innerWidth;
-            this.$store.state.innerHeight = height_;
+            // this.$store.state.innerHeight = height_;
             this.$store.state.innerWidth = width_;
             this.$store.state.is_pc = pcOrPhone();
         }

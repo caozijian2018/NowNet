@@ -30,7 +30,7 @@
                     />
                     <span class="font_size_15 padding_left_1">COUNTRIES</span>
                     
-                    <div class="orange margin_top_20 font_size_60 font_weight_800 phone_font_size_30px">50+</div>
+                    <div class="orange margin_top_20 font_size_60 font_weight_800 phone_font_size_30px">20+</div>
                 </div>
                 <div class="margin_top_72px phone_flex_1 phone_margin_top_0">
                     <img

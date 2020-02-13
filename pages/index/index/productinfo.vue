@@ -9,10 +9,10 @@
             </h1>
             <div class="display_flex flex_jusify_space width_100 phone_block">
                 <div class="width_30 phone_width_100" v-for="item in current.img" :key="item">
-                    <img :src="item" class="width_100" alt />
+                    <img :src="item" class="width_80" alt />
                 </div>
             </div>
-            <div class="indent10px margin_top_20 line_height_25px font_size_15">{{current.desc}}</div>
+            <div class="indent10px margin_top_20 line_height_27px font_size_21">{{current.desc}}</div>
         </div>
     </div>
 </div>
@@ -28,7 +28,7 @@ export default {
                     img: [
                         require("../../../static/img/products/1.png"),
                         require("../../../static/img/products/2.png"),
-                        require("../../../static/img/products/1.png")
+                        require("../../../static/img/products/3.png")
                     ],
                     desc:
                         "Ketchupbox is a premium recreation community platform. The service consists of multiple categories of funny contents, including videos, pictures, wallpapers and ringtones. Our service is enjoyed by over 20,000 users globally. "
@@ -45,8 +45,8 @@ export default {
                 {
                     title: "Secret Garden",
                     img: [
-                        require("../../../static/img/products/7.png"),
                         require("../../../static/img/products/8.png"),
+                        require("../../../static/img/products/7.png"),
                         require("../../../static/img/products/9.png")
                     ],
                     desc: "Secret Garden provides high-quality pleasing beauty videos and pictures to subscribers. The service consists of various kinds of beautiful girls. Users can browse the content online and the content is updated regularly."

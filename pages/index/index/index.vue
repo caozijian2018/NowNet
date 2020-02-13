@@ -90,7 +90,6 @@ export default {
             this.sortModuleOffset();
             this.whatchScroll();
             this.$jquery(".index_box").animate({ scrollLeft: this.$store.state.scroll}, 1000);
-            debugger
         });
     },
     methods: {
@@ -119,7 +118,7 @@ export default {
                 var dom = document.querySelectorAll(".max_width_box > div")[i]
                 width += dom.offsetWidth
             }
-            this.max_width = width + 1701;
+            this.max_width = width + 800;
             this.$nextTick(()=>{
             this.show_arr = [
                 0,

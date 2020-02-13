@@ -18,6 +18,9 @@ body {
   transform-origin: 14% center;
   transform: scale(1.5);
 }
+.underline{
+  text-decoration: underline;
+}
 .green{
   color: rgba(4, 181, 169, 1.0)
 }

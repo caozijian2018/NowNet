@@ -118,7 +118,7 @@ export default {
                 var dom = document.querySelectorAll(".max_width_box > div")[i]
                 width += dom.offsetWidth
             }
-            this.max_width = width + 800;
+            this.max_width = width + 1200;
             this.$nextTick(()=>{
             this.show_arr = [
                 0,

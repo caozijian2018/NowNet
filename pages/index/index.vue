@@ -1,5 +1,5 @@
 <template>
-    <div class="container display_flex flex_column" :style="{height:$store.state.innerHeight+'px'}">
+    <div class="container display_flex flex_column pc_min_width" :style="{height:$store.state.innerHeight+'px'}">
         <!-- <video-head @showLogin="showLogin" class :class="{height0:is_scroll_bottom}"></video-head> -->
         <div
             v-loading.fullscreen.lock="fullscreenLoading"

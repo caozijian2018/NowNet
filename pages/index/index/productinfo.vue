@@ -1,6 +1,7 @@
 <template>
-<div class="height_100 probox overflow_scroll">
-    <img class="width_100" :src="current" alt="">
+<div class="height_100 probox overflow_hidden back23">
+        <img class="width_100" :src="current" alt="">
+        <img src="../../../static/img/left1.png"  @click="back()" style="width: 100px;left: 20px; top:20px;position:absolute" class="cursor" alt="">
     <!-- <div class="white padding_top_30 padding_bottom_30">
         <div
             class="width_80 height_100 display_flex flex_center flex_column phone_width_90 margin_auto"
@@ -31,6 +32,12 @@ export default {
             ]
         };
     },
+    methods:{
+        back(){
+            this.$router.push({path: "/"})
+            // history.back()
+        },
+    },
     computed: {
         current(){
             var index = this.$route.query.index || 0;
@@ -42,5 +49,8 @@ export default {
 <style lang='less'>
 .probox{
     background: #111;
+}
+.back23{
+    background: rgba(35, 35, 35, 1.0);
 }
 </style>

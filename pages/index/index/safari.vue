@@ -30,7 +30,7 @@
                     <div
                         class="transition4 text navtext_gray"
                         @click="scrollPage(index)"
-                        :class="{orange_text: isScrolledThisItem(index) || selected_index == index}"
+                        :class="{orange_text1: isScrolledThisItem(index) || selected_index == index}"
                     >{{item}}</div>
                 </div>
             </div>

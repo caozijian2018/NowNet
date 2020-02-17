@@ -22,7 +22,7 @@
             <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: isTransitionBack(7)}"></phone-soft-ware>
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
-        <div class="navigation_positoin width_70 phone_none cursor" >
+        <div class="navigation_positoin display_none width_70 phone_none cursor" >
             <div class="display_flex flex_jusify_space">
                 <div
                     v-for="(item,index) in navigation_arr"

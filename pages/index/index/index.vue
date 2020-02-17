@@ -9,7 +9,7 @@
         </div>
         <div
             @scroll="scrollY"
-            class="height_100 phone_flex_1 phone_overflow_y_scroll phone_height_auto  max_width_box"
+            class="height_100 phone_flex_1 phone_overflow_y_scroll overflow_y_hidden phone_height_auto  max_width_box"
             :style="{width: $store.state.is_pc ? max_width+'px' : ''}"
         >
             <first-page ref="home_page" :class="{transition_back:  most_scroll + (inner_width)> show_arr[0]}" :transform-style-back="first_page_back_transform_style()" :transfrom-style="first_page_transform_style()"></first-page>
@@ -18,11 +18,8 @@
             <fourth-page ref="fourth_path" :class="{transition_back:isTransitionBack(3)}"></fourth-page>
             <fiveth-page ref="fiveth_path" :class="{transition_back: isTransitionBack(4)}"></fiveth-page>
             <products ref="products" :class="{transition_back: isTransitionBack(5)}"></products>
-            <!-- <secret-garden ref="secret" :translate-persent="secret_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></secret-garden> -->
             <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(6)}"></why-choose-us>
             <phone-soft-ware ref="soft_ware"  :translate-persent="phone_soft_page_scroll()" :class="{transition_back: isTransitionBack(7)}"></phone-soft-ware>
-            <!-- <why-choose-us  ref="why_choose_us" :translate-persent="why_choose_page_scroll()" :class="{transition_back: isTransitionBack(8)}"></why-choose-us> -->
-            <!-- <contactus ref="contactus" :translate-persent="contact_page_scroll()" :class="{transition_back: isTransitionBack(9)}" ></contactus> -->
         </div>
         <!-- 下面的导航 文字和border分开 简单点 border 作为整个-->
         <div class="navigation_positoin width_70 phone_none cursor" >
@@ -64,6 +61,8 @@ import phoneSoftWare from "../../../components/phone_soft_ware";
 import whyChooseUs from "../../../components/why_choose_us";
 import contactus from "../../../components/contactus";
 import scrollFunc from "../../../util/watch_scroll";
+import is_rubbish_browser from "../../../util/is_rubbish_browser";
+
 
 import bus from "../../../util/bus"
 
@@ -81,6 +80,7 @@ export default {
         contactus
     },
     mounted() {
+        this.setRubbish();
         this.init();
         this.$nextTick(() => {
             this.inner_width = this.$store.state.innerWidth / 2;
@@ -93,6 +93,12 @@ export default {
         });
     },
     methods: {
+        setRubbish(){
+            this.$store.state.is_rubbish_browser = is_rubbish_browser();
+            if(this.$store.state.is_rubbish_browser && pcOrPhone()){
+                this.$router.push({path: "/safari"})
+            }
+        },
         whatchScroll(){
              var num = 0;
             window.onmousewheel = document.onmousewheel =  (e)=>{

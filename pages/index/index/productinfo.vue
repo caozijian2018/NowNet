@@ -34,7 +34,8 @@ export default {
     },
     methods:{
         back(){
-            this.$router.push({path: "/"})
+            history.back()
+            // this.$router.push({path: "/"})
             // history.back()
         },
     },

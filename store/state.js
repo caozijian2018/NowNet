@@ -8,4 +8,5 @@ export default {
   innerWidth: 0,
   scroll: 0,
   is_pc: true,
+  is_rubbish_browser: false,
 }

@@ -48,6 +48,8 @@ export default {
         this.$nextTick(()=>{
             this.whatchScroll();
             this.setMaxwidth();
+            this.$jquery(".index_box").animate({ scrollLeft: this.$store.state.scroll}, 1000);
+
         })
     },
     data(){

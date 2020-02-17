@@ -77,9 +77,13 @@ export default {
         scrollPage(i) {
             this.selected_index = i;
             // console.log()
+            if(i == 7){
+                i = 8;
+            }
             var distance = document.querySelectorAll(".boox > img")[i].offsetLeft
             console.log(888)
             console.log(i)
+            console.log(distance)
             console.log(this.show_arr)
             this.$jquery(".bbbox").animate({ scrollLeft: distance }, 1000);
             this.$store.state.scroll = distance;
@@ -89,7 +93,6 @@ export default {
             var scroll_top = v.target.scrollTop;
             this.scroll_left = scroll_left;
             this.scroll_top = scroll_top;
-            debugger
             // bus.$emit("scroll", scroll_left)
             // bus.$emit("scrollY", scroll_top)
             if(scroll_left > this.most_scroll) {

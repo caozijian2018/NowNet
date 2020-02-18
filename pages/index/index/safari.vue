@@ -48,7 +48,7 @@ export default {
         this.$nextTick(()=>{
             this.whatchScroll();
             this.setMaxwidth();
-            this.$jquery(".index_box").animate({ scrollLeft: this.$store.state.scroll}, 1000);
+            this.$jquery(".bbbox").animate({ scrollLeft: this.$store.state.scroll}, 1000);
 
         })
     },
@@ -98,7 +98,7 @@ export default {
             if(scroll_left > this.most_scroll) {
                this.most_scroll = scroll_left;
             }
-            // this.$store.state.scroll = scrollLeft;
+            this.$store.state.scroll = scrollLeft;
         },
         isScrolledThisItem(i) {
             try {
@@ -114,9 +114,9 @@ export default {
             if(clix > 0 && clix < img_width/3){
                 this.$router.push({path: "/productinfo?index=0"})
             }else if(clix > img_width / 3 && clix < (img_width*2/3)){
-                this.$router.push({path: "/productinfo?index=1"})
-            }else if(clix > (img_width*2/3) && clix < img_width){
                 this.$router.push({path: "/productinfo?index=2"})
+            }else if(clix > (img_width*2/3) && clix < img_width){
+                this.$router.push({path: "/productinfo?index=1"})
             }
         },
         fun(v){

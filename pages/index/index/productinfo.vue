@@ -1,5 +1,5 @@
 <template>
-<div class="height_100 probox overflow_hidden back23">
+<div class="height_100 probox overflow_scroll back23">
         <img class="width_100" :src="current" alt="">
         <img src="../../../static/img/left1.png"  @click="back()" style="width: 100px;left: 20px; top:20px;position:absolute" class="cursor" alt="">
     <!-- <div class="white padding_top_30 padding_bottom_30">

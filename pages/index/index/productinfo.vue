@@ -28,7 +28,7 @@ export default {
                 require("../../../static/img/products/k.jpg"),
                 require("../../../static/img/products/m.jpg"),
                 require("../../../static/img/products/s.jpg"),
-
+                require("../../../static/img/products/g.png"),
             ]
         };
     },

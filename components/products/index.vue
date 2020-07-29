@@ -17,23 +17,27 @@
             <h1
                 class="display_inline_block phone_show margin_top_20 width_90 margin_auto margin_bottom_2 fourth_page_h1"
             >Products</h1>
-            <div class="line_height_27px gray_1 font_size_21 width_70 phone_width_100 margin_top_20 margin_bottom_15">We aim at bringing premium and unique services to global mobile users. We are responsible for developing and marketing mobile content products. Our current products mainly include Ketchupbox, MyH5Game, and Secret Garden.</div>
+            <div class="line_height_27px gray_1 font_size_21 width_70 phone_width_100 margin_top_20 margin_bottom_15">We aim at bringing premium and unique services to global mobile users. We are responsible for developing and marketing mobile content products. Our current products mainly include Ketchupbox, MyH5Game, Secret Garden, and MyGameField.</div>
             <div class="margin_top_20 display_flex flex_jusify_space phone_block">
-                <div class="width_30 phone_width_100 cursor" @click="jump(0)">
+                <div class="width_23 phone_width_100 cursor" @click="jump(0)">
                     <img src="../../static/img/f2.png" alt class="width_100" />
                     <div class="font_size_20 gray_1 margin_top_10 line_height_25px underline text_center">
                         Ketchupbox
                     </div>
                 </div>
-                <div class="width_30 phone_width_100 cursor" @click="jump(2)">
+                <div class="width_23 phone_width_100 cursor" @click="jump(2)">
                     <img src="../../static/img/secret.jpeg" alt class="width_100" />
                     <div class="font_size_20 margin_top_10 gray_1 line_height_25px underline text_center">
                         Secret Garden
                     </div>
                 </div>
-                <div class="width_30 phone_width_100 cursor" @click="jump(1)">
+                <div class="width_23 phone_width_100 cursor" @click="jump(1)">
                     <img src="../../static/img/com.png" alt class="width_100" />
                     <div class="font_size_20 gray_1 margin_top_10 line_height_25px underline text_center">MyH5Game</div>
+                </div>
+                <div class="width_23 phone_width_100 cursor" @click="jump(3)">
+                    <img src="../../static/img/g.png" alt class="width_100" />
+                    <div class="font_size_20 gray_1 margin_top_10 line_height_25px underline text_center">MyGameField</div>
                 </div>
             </div>
         </div>
